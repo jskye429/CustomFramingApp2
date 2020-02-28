@@ -1,0 +1,9 @@
+.is-full{
+    background-color: blue;
+    color: white;
+}
+
+.card-footer{
+    font-size: 11px;
+    text-align: center;
+}

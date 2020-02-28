@@ -13,7 +13,7 @@
       "series": "Black 06",
       "finish": "Matt Black",
       "height": "1 3/8",
-      "width": 3,
+      "width": "3",
       "catalog_page": "H-3",
       "price_per_foot": 10
     },
@@ -21,8 +21,8 @@
       "sku": 24601,
       "series": "Black 06",
       "finish": "Matt Black",
-      "height": 8,
-      "width": 2,
+      "height": "8",
+      "width": "2",
       "catalog_page": "H-3",
       "price_per_foot": 7
     },
