@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props){
     return(
-        <div className="column is-half">
+       
          <div className= "card">
             <div className="card-header">
                 {props.series} / {props.finish}
@@ -26,7 +26,7 @@ function Card(props){
                 SKU: {props.sku}
             </div>
         </div>   
-        </div>
+        
         
     )
 }
