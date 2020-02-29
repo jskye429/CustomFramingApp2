@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 const db = require("../models");
+const Schema = mongoose.Schema;
 
-// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/studioFrames"
 );
+mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true });
+
+
 
 
 
@@ -39,6 +42,7 @@ const frameSeed = [
       price:"7"
 
     }
+
 ];
 
 

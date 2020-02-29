@@ -1,11 +1,9 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api/frames");
 
-router.use("/api", apiRoutes);
+const frameRoutes = require("./api/frames");
 
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+router.use("/api/frames", frameRoutes);
 
-module.exports= router
+module.exports = router
+
