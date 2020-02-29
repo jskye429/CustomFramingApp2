@@ -2,20 +2,32 @@ import React from "react";
 
 function Card(props){
     return(
-        <div className= "card">
+        <div className="column is-half">
+         <div className= "card">
             <div className="card-header">
                 {props.series} / {props.finish}
             </div>
             <div className="card-content">
                 <div>Height: {props.height}</div>
                 <div>Width: {props.width}</div>
-                <div>Price: ${(props.price_per_foot)}</div>
-                <button onClick={props.handleView} value={props.sku}>View</button>
+                <div>Price: ${(props.price)}.00</div>
+                <button 
+                onClick={props.handleView} 
+                value= {props.value}
+                sku={props.sku}
+                series={props.series}
+                finish={props.finish}
+                height={props.height}
+                width={props.width}
+                price={props.price}
+                >View</button>
             </div>
             <div className="card-footer">
                 SKU: {props.sku}
             </div>
+        </div>   
         </div>
+        
     )
 }
 
