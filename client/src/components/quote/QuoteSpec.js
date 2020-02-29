@@ -1,13 +1,20 @@
 import React from "react";
 
-function QuoteSpec(props) {
+function QuoteSpec(props){
+// class QuoteSpec extends Component{
+
+//   state={
+//     selectedView
+//   }
+
+//   render(){
   return (
     <div className="section">
       <h1 className="is-size-1 has-text-centered">Get a Quote for {props.sku}</h1>
       <br></br>
 
       <div className="field">
-          <label class="label">Frame</label>
+          <label className="label">Frame</label>
           <div>
             SKU: {props.sku}
           </div>
@@ -51,6 +58,9 @@ function QuoteSpec(props) {
       </form>
     </div>
   );
-}
+  }
+// }
+
+
 
 export default QuoteSpec;

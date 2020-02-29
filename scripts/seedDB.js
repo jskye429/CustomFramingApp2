@@ -14,34 +14,35 @@ mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true });
 
 
 const frameSeed = [
-  {
-      sku: "24301",
+    {
+        sku: "24301",
+        series:"Black 06",
+        finish:"Matt Black",
+        height:"1 7/8",
+        width:"2 1/2",
+        catalogpage:"H-3",
+        price:"7"
+      },
+    { 
+      sku: "24401",
       series:"Black 06",
       finish:"Matt Black",
-      height:"1 7/8",
-      width:"2 1/2",
-      catalog_page:"H-3",
-      price_per_foot:"7"
+      height:"1 3/8",
+      width:"3",
+      catalogpage:"H-3",
+      price:"10"
     },
-  { 
-    sku: "24401",
-    series:"Black 06",
-    finish:"Matt Black",
-    height:"1 3/8",
-    width:"3",
-    catalog_page:"H-3",
-    price_per_foot:"10"
-  },
-{   
-  sku: "24601",
-    series:"Black 06",
-    finish:"Matt Black",
-    height:"8",
-    width:"2",
-    catalog_page:"H-3",
-    price_per_foot:"7"
+  {   
+    sku: "24601",
+      series:"Black 06",
+      finish:"Matt Black",
+      height:"8",
+      width:"2",
+      catalogpage:"H-3",
+      price:"7"
 
-  }
+    }
+
 ];
 
 

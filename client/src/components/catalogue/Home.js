@@ -6,12 +6,33 @@ import "./home.css";
 class Home extends Component{
   state={
     data,
-    selectedView: ""
+    selectedView: {
+      value: this.sku,
+      sku:"",
+      series:"",
+      finish: "",
+      height: "",
+      width: "",
+      price: ""
+    }
   }
 
   handleView = event => {
-    this.setState({selectedView: event.target.value}, ()=>{
-      window.location.href="/quoteSpec";
+
+  console.log("event", event)
+  console.log("this", event.target.attributes.getNamedItem("series").value)
+    this.setState({selectedView: {
+      sku: event.target.attributes.getNamedItem("sku").value,
+      series: event.target.attributes.getNamedItem("series").value,
+      finish: event.target.attributes.getNamedItem("finish").value,
+      height: event.target.attributes.getNamedItem("height").value,
+      width: event.target.attributes.getNamedItem("width").value,
+      price: event.target.attributes.getNamedItem("price").value
+      }
+    }, ()=>{
+      console.log(this.state.selectedView)
+      // window.location.href="/quoteSpec/:id";
+      //axios.get by ID once DB is loaded, then call detail from that sku to the quoteSpec page
     })
   }
 
@@ -19,28 +40,84 @@ class Home extends Component{
   return (
     <div className="section">
       <div className="container">
-        <div className="columns">
+        <div className="columns is-vcentered">
           {/* banner */}
-          <div className="column is-full">
-            <h1>Framed</h1>
+          <div className="column banner">
+              Framed
               <p>Find an estimate for your customized frame quickly and easily</p>
           </div>
+          </div>
         
+          <div className="columns is-vcentered">
             {this.state.data.map(item=>(
-              <div className="column is-third">
+              
+              
                 <Card 
                 key={item.sku}
                 series={item.series}
                 finish={item.finish}
                 width={item.width}
-                price={item.price_per_foot}
+                price={item.price}
+                sku={item.sku}
                 handleView= {this.handleView}
                 />
-              </div>
+                
             ))}
           </div>
+          </div>
+          
+{/* start */}
+      <div className="section">
+      <h1 className="is-size-1 has-text-centered">Get a Quote for {this.state.selectedView.sku}</h1>
+      <br></br>
+
+      <div className="field">
+          <label className="label">Frame</label>
+          <div>
+            SKU: {this.state.selectedView.sku}
+          </div>
+          <div>
+            Finish: {this.state.selectedView.finish}
+          </div>
+          <div>
+            Width: {this.state.selectedView.width}
+          </div>
         </div>
-      </div>
+
+      <form>
+        {/* ENTER A HEIGHT */}
+        <div className="field">
+          <label className="label">Height</label>
+          <div className="control">
+            <input
+              type="text"
+              name="height"
+              value=""
+              placeholder="Please Enter a Height"
+            />
+          </div>
+        </div>
+
+        {/* ENTER A LENGTH */}
+        <div className="field">
+          <label className="label">Length</label>
+          <div className="control">
+            <input
+              type="text"
+              name="length"
+              value=""
+              placeholder="Please Enter a Length"
+            />
+          </div>
+        </div>
+
+        {/* SUBMIT BUTTON */}
+        <input className="button is-light" type="submit"></input>
+      </form>
+    </div>
+{/* end */}
+        </div>
+      
     )
   }
 }
