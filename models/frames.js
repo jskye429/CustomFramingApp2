@@ -19,7 +19,12 @@ const Frame = mongoose.model("Frame", frameSchema);
 
 
 
-module.exports = Frame;  
+module.exports = Frame;
+// module.exports = mongoose.model('frameSchema', frameSchema);
+
+
+
+
 
 
 
