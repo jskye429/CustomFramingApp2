@@ -5,7 +5,7 @@ const Frame = require("../../models/frames");
 
 router.route("/").get((req, res) => {
     Frame.find().then(data => {
-    console.log(data);
+    res.json(data);
     })
 });
 

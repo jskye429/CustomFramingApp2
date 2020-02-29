@@ -11,8 +11,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true });
 
 
 
-
-
 const frameSeed = [
     {
         sku: "24301",
@@ -46,9 +44,9 @@ const frameSeed = [
 ];
 
 
-db.Frames
+db.Frame
   .remove({})
-  .then(() => db.Book.collection.insertMany(frameSeed))
+  .then(() => db.Frame.collection.insertMany(frameSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
