@@ -12,17 +12,32 @@ mongoose.connect(
 
 const frameSeed = [
     {
-        title: "The Dead Zone",
-        author: "Stephen King",
-        synopsis:
-          "A number-one national best seller about a man who wakes up from a five-year coma able to see people's futures and the terrible fate awaiting mankind in The Dead Zone - a \"compulsive page-turner\" (The Atlanta Journal-Constitution). Johnny Smith awakens from a five-year coma after his car accident and discovers that he can see people's futures and pasts when he touches them. Many consider his talent a gift; Johnny feels cursed. His fiancée married another man during his coma, and people clamor for him to solve their problems. When Johnny has a disturbing vision after he shakes the hand of an ambitious and amoral politician, he must decide if he should take drastic action to change the future. The Dead Zone is a \"faultlessly paced...continuously engrossing\" (Los Angeles Times) novel of second sight.",
-        date: new Date(Date.now())
+        sku: "24301",
+        series:"Black 06",
+        finish:"Matt Black",
+        height:"1 7/8",
+        width:"2 1/2",
+        catalog_page:"H-3",
+        price_per_foot:"7"
       },
-    {
-        
-    
-    
-    
+    { 
+      sku: "24401",
+      series:"Black 06",
+      finish:"Matt Black",
+      height:"1 3/8",
+      width:"3",
+      catalog_page:"H-3",
+      price_per_foot:"10"
+    },
+  {   
+    sku: "24601",
+      series:"Black 06",
+      finish:"Matt Black",
+      height:"8",
+      width:"2",
+      catalog_page:"H-3",
+      price_per_foot:"7"
+
     }
 ];
 
