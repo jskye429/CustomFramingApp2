@@ -39,6 +39,19 @@ const frameSeed = [
       catalogpage:"H-3",
       price:"7"
 
+    },
+    {
+      sku: "24501",
+      series:"Black 06",
+      finish:"Matt Black",
+      height:"8",
+      width:"2",
+      catalogpage:"H-3",
+      price:"7"
+,
+    }
+    {
+    
     }
 
 ];
