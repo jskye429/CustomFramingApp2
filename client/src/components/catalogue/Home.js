@@ -3,11 +3,12 @@ import data from "../../frames.json";
 import Card from "../Cards/Card";
 import "./home.css";
 
+// import axios from "axios"
+
 class Home extends Component {
   state = {
     data,
     selectedView: {
-      value: this.sku,
       sku: "",
       series: "",
       finish: "",
@@ -18,8 +19,6 @@ class Home extends Component {
   };
 
   handleView = event => {
-    console.log("event", event);
-    console.log("this", event.target.attributes.getNamedItem("series").value);
     this.setState(
       {
         selectedView: {
@@ -32,8 +31,13 @@ class Home extends Component {
         }
       },
       () => {
-        console.log(this.state.selectedView);
-        // window.location.href="/quoteSpec/:id";
+        let spec = this.state.selectedView.sku
+        
+        window.location.href="/quoteSpec/:"+spec;
+        
+          // return axios.get("/quoteSpec/"+spec)
+
+      
         //axios.get by ID once DB is loaded, then call detail from that sku to the quoteSpec page
       }
     );
@@ -55,51 +59,7 @@ class Home extends Component {
         </div>
         <br></br>
 
-        {/* start */}
-        <div className="section">
-          <h1 className="is-size-1 has-text-centered is pulled right">
-            Get a Quote for {this.state.selectedView.sku}
-          </h1>
-          <br></br>
-
-          <div className="field">
-            <label className="label">Frame</label>
-            <div>SKU: {this.state.selectedView.sku}</div>
-            <div>Finish: {this.state.selectedView.finish}</div>
-            <div>Width: {this.state.selectedView.width}</div>
-          </div>
-
-          <form>
-            {/* ENTER A HEIGHT */}
-            <div className="field">
-              <label className="label">Height</label>
-              <div className="control">
-                <input
-                  type="text"
-                  name="height"
-                  value=""
-                  placeholder="Please Enter a Height"
-                />
-              </div>
-            </div>
-
-            {/* ENTER A LENGTH */}
-            <div className="field">
-              <label className="label">Length</label>
-              <div className="control">
-                <input
-                  type="text"
-                  name="length"
-                  value=""
-                  placeholder="Please Enter a Length"
-                />
-              </div>
-            </div>
-
-            {/* SUBMIT BUTTON */}
-            <input className="button is-light" type="submit"></input>
-          </form>
-        </div>
+        
         {this.state.data.map(item => (
           <div className="column is-half is-pulled-left">
             <Card
