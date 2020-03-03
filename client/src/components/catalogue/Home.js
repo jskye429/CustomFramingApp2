@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import data from "../../frames.json";
+
 import Card from "../Cards/Card";
 import "./home.css";
 
-// import axios from "axios"
+import axios from "axios"
 
 class Home extends Component {
   state = {
-    data,
+    data: [],
     selectedView: {
+      key: this.sku,
       sku: "",
       series: "",
       finish: "",
@@ -18,10 +19,19 @@ class Home extends Component {
     }
   };
 
+  componentDidMount(){
+    axios.get("/api/frames").then(response =>{
+      console.log(response)
+      this.setState({data: response.data})
+    })
+  }
+
+
   handleView = event => {
     this.setState(
       {
         selectedView: {
+          value: event.target.attributes.getNamedItem("_id").value,
           sku: event.target.attributes.getNamedItem("sku").value,
           series: event.target.attributes.getNamedItem("series").value,
           finish: event.target.attributes.getNamedItem("finish").value,
@@ -47,6 +57,7 @@ class Home extends Component {
     return (
       <div className="section">
         <div className="container">
+          
           <div className="columns is-vcentered">
             {/* banner */}
             <div className="column banner">
@@ -63,7 +74,7 @@ class Home extends Component {
         {this.state.data.map(item => (
           <div className="column is-half is-pulled-left">
             <Card
-              key={item.sku}
+              key={item._id}
               series={item.series}
               finish={item.finish}
               height={item.height}

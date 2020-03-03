@@ -1,6 +1,5 @@
 const express = require("express");
-const cors = require('cors');
-
+const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -20,12 +19,12 @@ if (process.env.NODE_ENV === "production") {
 app.use("/", routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/studioFrames");
-mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/studioFrames", { useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
+
 
 // Start the API server
 app.listen(PORT, function() {
