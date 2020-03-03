@@ -1,28 +1,38 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 
-function QuoteSpec(props){
-// class QuoteSpec extends Component{
+class QuoteSpec extends Component{
+ 
+  // console.log(props);
+  state={
+    specData:{}
+  }
 
-//   state={
-//     selectedView
-//   }
+  componentDidMount(){
+    const skusku = this.props.match.params.sku;
+    axios.get("/api/frames/quoteSpec/" + skusku).then(response =>{
+      this.setState({specData: response.data[0]})
 
-//   render(){
+    })
+  }
+
+  render(){
+  const props = this.props;
   return (
     <div className="section">
-      <h1 className="is-size-1 has-text-centered">Get a Quote for {props.sku}</h1>
+      <h1 className="is-size-1 has-text-centered">Get a Quote for {this.state.specData.sku}</h1>
       <br></br>
 
       <div className="field">
           <label className="label">Frame</label>
           <div>
-            SKU: {props.sku}
+            SKU: {this.state.specData.sku}
           </div>
           <div>
-            Finish: {props.finish}
+            Finish: {this.state.specData.finish}
           </div>
           <div>
-            Width: {props.width}
+            Width: {this.state.specData.width}
           </div>
         </div>
 
@@ -59,7 +69,7 @@ function QuoteSpec(props){
     </div>
   );
   }
-// }
+}
 
 
 

@@ -9,9 +9,9 @@ router.get("/", (req, res) => {
     })
 });
 
-router.route("/quoteSpec/:sku").get((req, res) =>{
-    Frame.findOne({sku: req.params.sku}).then(data=>{
-        console.log("response: ", data)
+router.get("/quoteSpec/:sku",(req, res) =>{
+    var reqsku = req.params.sku
+    Frame.find({sku: reqsku}).then(data=>{
         res.json(data)
     }).catch(err => res.status(422).json(err))
 })
