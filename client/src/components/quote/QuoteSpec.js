@@ -3,9 +3,10 @@ import axios from "axios";
 
 class QuoteSpec extends Component{
  
-  // console.log(props);
   state={
-    specData:{}
+    specData:{},
+    height: "",
+    length: ""
   }
 
   componentDidMount(){
@@ -16,15 +17,27 @@ class QuoteSpec extends Component{
     })
   }
 
+  handleHeight= event =>{
+    this.setState({height: event.target.value})
+  }
+  
+  handleLength= event =>{
+    this.setState({length: event.target.value})
+  }
+
+  handleQuoteRequest= event =>{
+    event.preventDefault()
+    console.log("hello", this.state)
+  }
+
   render(){
-  const props = this.props;
   return (
     <div className="section">
-      <h1 className="is-size-1 has-text-centered">Get a Quote for {this.state.specData.sku}</h1>
-      <br></br>
-
-      <div className="field">
-          <label className="label">Frame</label>
+      <h1 className="is-size-1 has-text-centered">Calculate Quote: "{this.state.specData.series}" {this.state.specData.sku}</h1>
+      <br/>
+      <br/> 
+      <div className="field v-centered">
+          <label className="label">Specs</label>
           <div>
             SKU: {this.state.specData.sku}
           </div>
@@ -35,17 +48,20 @@ class QuoteSpec extends Component{
             Width: {this.state.specData.width}
           </div>
         </div>
-
+      <br/>
       <form>
         {/* ENTER A HEIGHT */}
+        <label className="label">Please select dimensions in Inches</label>
         <div className="field">
           <label className="label">Height</label>
           <div className="control">
             <input
               type="text"
               name="height"
-              value=""
+              id="height"
+              value={this.state.height}
               placeholder="Please Enter a Height"
+              onChange={this.handleHeight}
             />
           </div>
         </div>
@@ -57,14 +73,20 @@ class QuoteSpec extends Component{
             <input
               type="text"
               name="length"
-              value=""
+              id="length"
+              value={this.state.length}
               placeholder="Please Enter a Length"
+              onChange={this.handleLength}
             />
           </div>
         </div>
 
         {/* SUBMIT BUTTON */}
-        <input className="button is-light" type="submit"></input>
+        <input 
+        className="button is-light" 
+        type="submit"
+        onSubmit={this.handleQuoteRequest}
+        ></input>
       </form>
     </div>
   );

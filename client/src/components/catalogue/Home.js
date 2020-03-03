@@ -46,7 +46,7 @@ class Home extends Component {
               key={item._id}
               series={item.series}
               finish={item.finish}
-              height={item.height}
+              depth={item.depth}
               width={item.width}
               price={item.price}
               sku={item.sku}
