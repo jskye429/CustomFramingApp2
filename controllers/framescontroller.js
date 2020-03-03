@@ -11,8 +11,8 @@ module.exports = {
   },
 findBySKU: function(req, res) {
         db.Frames
-          .findBySKU(req.params.id)
-          .then(dbModel => res.json(dbModel))
+          .findBySKU(req.params.sku)
+          .then(dbModel => console.log("db: ",dbModel))
           .catch(err => res.status(422).json(err));
       }
 

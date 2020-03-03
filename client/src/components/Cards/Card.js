@@ -13,7 +13,6 @@ function Card(props){
                 <div>Price: ${(props.price)}.00</div>
                 <button 
                 onClick={props.handleView} 
-                value= {props.value}
                 sku={props.sku}
                 series={props.series}
                 finish={props.finish}
