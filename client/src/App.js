@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/Cart" component={Cart} />
         <Route exact path="/Quote" component={Quote} />
-        <Route exact path="/QuoteSpec" component={QuoteSpec} />
+        <Route path="/QuoteSpec/:sku" component={QuoteSpec} />
       </div>
     </BrowserRouter>
   );

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-import data from "../../frames.json";
+
 import Card from "../Cards/Card";
 import "./home.css";
 
+import axios from "axios"
+
 class Home extends Component {
   state = {
-    data,
+    data: [],
     selectedView: {
-      value: this.sku,
+      key: this.sku,
       sku: "",
       series: "",
       finish: "",
@@ -17,12 +19,19 @@ class Home extends Component {
     }
   };
 
+  componentDidMount(){
+    axios.get("/api/frames").then(response =>{
+      console.log(response)
+      this.setState({data: response.data})
+    })
+  }
+
+
   handleView = event => {
-    console.log("event", event);
-    console.log("this", event.target.attributes.getNamedItem("series").value);
     this.setState(
       {
         selectedView: {
+          value: event.target.attributes.getNamedItem("_id").value,
           sku: event.target.attributes.getNamedItem("sku").value,
           series: event.target.attributes.getNamedItem("series").value,
           finish: event.target.attributes.getNamedItem("finish").value,
@@ -32,8 +41,13 @@ class Home extends Component {
         }
       },
       () => {
-        console.log(this.state.selectedView);
-        // window.location.href="/quoteSpec/:id";
+        let spec = this.state.selectedView.sku
+        
+        window.location.href="/quoteSpec/:"+spec;
+        
+          // return axios.get("/quoteSpec/"+spec)
+
+      
         //axios.get by ID once DB is loaded, then call detail from that sku to the quoteSpec page
       }
     );
@@ -43,6 +57,7 @@ class Home extends Component {
     return (
       <div className="section">
         <div className="container">
+          
           <div className="columns is-vcentered">
             {/* banner */}
             <div className="column banner">
@@ -55,55 +70,11 @@ class Home extends Component {
         </div>
         <br></br>
 
-        {/* start */}
-        <div className="section">
-          <h1 className="is-size-1 has-text-centered is pulled right">
-            Get a Quote for {this.state.selectedView.sku}
-          </h1>
-          <br></br>
-
-          <div className="field">
-            <label className="label">Frame</label>
-            <div>SKU: {this.state.selectedView.sku}</div>
-            <div>Finish: {this.state.selectedView.finish}</div>
-            <div>Width: {this.state.selectedView.width}</div>
-          </div>
-
-          <form>
-            {/* ENTER A HEIGHT */}
-            <div className="field">
-              <label className="label">Height</label>
-              <div className="control">
-                <input
-                  type="text"
-                  name="height"
-                  value=""
-                  placeholder="Please Enter a Height"
-                />
-              </div>
-            </div>
-
-            {/* ENTER A LENGTH */}
-            <div className="field">
-              <label className="label">Length</label>
-              <div className="control">
-                <input
-                  type="text"
-                  name="length"
-                  value=""
-                  placeholder="Please Enter a Length"
-                />
-              </div>
-            </div>
-
-            {/* SUBMIT BUTTON */}
-            <input className="button is-light" type="submit"></input>
-          </form>
-        </div>
+        
         {this.state.data.map(item => (
           <div className="column is-half is-pulled-left">
             <Card
-              key={item.sku}
+              key={item._id}
               series={item.series}
               finish={item.finish}
               height={item.height}
