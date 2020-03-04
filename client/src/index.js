@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {useUser} from './context/auth'
+import AuthenticatedApp from './authenticated-app'
+import UnauthenticatedApp from './unauthenticated-app'
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
