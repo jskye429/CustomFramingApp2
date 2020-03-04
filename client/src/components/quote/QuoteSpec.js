@@ -1,19 +1,28 @@
 import React, { Component } from "react";
+import "./quote.css";
 import axios from "axios";
+import Section from "../Section";
+import calculate from "./js/RFQ"
+import Modal from "../Modal";
+import QuoteForm from "./QuoteForm";
 
 class QuoteSpec extends Component{
- 
+
+  
   state={
     specData:{},
-    height: "",
-    length: ""
-  }
+    height: Number,
+    length: Number,
+    totalMeasure: Number,
+    priceEst: Number,
+    activeModal: ""
+  }  
 
+  
   componentDidMount(){
     const skusku = this.props.match.params.sku;
     axios.get("/api/frames/quoteSpec/" + skusku).then(response =>{
       this.setState({specData: response.data[0]})
-
     })
   }
 
@@ -27,68 +36,72 @@ class QuoteSpec extends Component{
 
   handleQuoteRequest= event =>{
     event.preventDefault()
-    console.log("hello", this.state)
+
+      this.setState({totalMeasure: calculate.footageCalc(this.state.length, this.state.height)}, ()=>{
+
+        this.setState({priceEst: calculate.priceCalc(this.state.totalMeasure, this.state.specData.price)})
+
+        this.setState({activeModal: "is-active"})
+      })
+  }
+
+  handleCart = event =>{
+    console.log("Adding to Cart")
+  }
+
+  handleExit = () => {
+    this.setState({activeModal: ""})
   }
 
   render(){
+
   return (
-    <div className="section">
-      <h1 className="is-size-1 has-text-centered">Calculate Quote: "{this.state.specData.series}" {this.state.specData.sku}</h1>
-      <br/>
-      <br/> 
-      <div className="field v-centered">
-          <label className="label">Specs</label>
-          <div>
-            SKU: {this.state.specData.sku}
+    <Section>
+
+      <div className="columns">
+        <div className="column">
+
+        <h1 className="is-size-3 has-text-centered banner">
+          Calculate Quote: "{this.state.specData.series}" {this.state.specData.sku}</h1>
+        <br/> 
+        <div className="columns">
+            <div className="column is-half v-centered left-pad">
+
+                <label className="title">Specs</label>
+                <br/>
+                <br/>
+                <div>SKU: {this.state.specData.sku}</div>
+                <div>Price per Foot: ${this.state.specData.price}.00</div>
+                <div>Finish: {this.state.specData.finish}</div>
+                <div>Depth: {this.state.specData.depth} inches</div>
+                <div>Width: {this.state.specData.width} inches</div>
+
           </div>
-          <div>
-            Finish: {this.state.specData.finish}
-          </div>
-          <div>
-            Width: {this.state.specData.width}
-          </div>
-        </div>
-      <br/>
-      <form>
-        {/* ENTER A HEIGHT */}
-        <label className="label">Please select dimensions in Inches</label>
-        <div className="field">
-          <label className="label">Height</label>
-          <div className="control">
-            <input
-              type="text"
-              name="height"
-              id="height"
-              value={this.state.height}
-              placeholder="Please Enter a Height"
-              onChange={this.handleHeight}
+          <div className="column is-half">
+        
+            <QuoteForm
+            height={this.state.height}
+            handleHeight={this.handleHeight}
+            length={this.state.length}
+            handleLength={this.handleLength}
+            handleQuoteRequest={this.handleQuoteRequest}
             />
+          
           </div>
         </div>
 
-        {/* ENTER A LENGTH */}
-        <div className="field">
-          <label className="label">Length</label>
-          <div className="control">
-            <input
-              type="text"
-              name="length"
-              id="length"
-              value={this.state.length}
-              placeholder="Please Enter a Length"
-              onChange={this.handleLength}
-            />
-          </div>
         </div>
 
-        {/* SUBMIT BUTTON */}
-        <input 
-        className="button is-light" 
-        type="submit"
-        onSubmit={this.handleQuoteRequest}
-        ></input>
-      </form>
-    </div>
+        <Modal
+        activeModal={this.state.activeModal}
+        totalMeasure= {this.state.totalMeasure}
+        priceEst={this.state.priceEst}
+        handleCart={this.handleCart}
+        handleExit={this.handleExit}
+        />
+
+      </div>
+      </Section>
   );
   }
 }
