@@ -1,4 +1,5 @@
 import React from "react";
+import "./card.css";
 
 function Card(props){
     return(
@@ -11,7 +12,9 @@ function Card(props){
                 <div>Depth: {props.depth}</div>
                 <div>Width: {props.width}</div>
                 <div>Price/FT: ${(props.price)}.00</div>
-                <button 
+                <br/>
+                <button
+                className="button is-info is-small"
                 onClick={props.handleView} 
                 sku={props.sku}
                 series={props.series}
@@ -19,7 +22,7 @@ function Card(props){
                 depth={props.depth}
                 width={props.width}
                 price={props.price}
-                >View</button>
+                >Create Quote</button>
             </div>
             <div className="card-footer">
                 SKU: {props.sku}

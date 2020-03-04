@@ -11,7 +11,7 @@ function Nav() {
 
       <button className="button is-success"><Link to="/cart">Cart</Link></button>
 
-      <button className="button is-success"><Link to="/quote">Request a Quote</Link></button>
+      {/* <button className="button is-success"><Link to="/quote">Request a Quote</Link></button> */}
       
       </div>
       <br />

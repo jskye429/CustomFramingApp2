@@ -30,7 +30,7 @@ class Home extends Component {
           <div className="columns is-vcentered">
             {/* banner */}
             <div className="column banner">
-              Framed
+              <h1 className="title"> Custom Studio Frames</h1>
               <p>
                 Find an estimate for your customized frame quickly and easily
               </p>

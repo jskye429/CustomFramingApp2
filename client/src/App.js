@@ -4,8 +4,11 @@ import Nav from "./components/Nav/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/catalogue/Home";
 import Login from "./components/login/Login";
-import Cart from "./components/cart/Cart.js";
-import QuoteSpec from "./components/quote/QuoteSpec";
+import Cart from "./components/Cart/Cart.js";
+import QuoteSpec from "./components/Quote/QuoteSpec";
+
+
+
 
 function App() {
   return (
