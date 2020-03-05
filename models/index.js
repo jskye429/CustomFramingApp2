@@ -1,4 +1,10 @@
 module.exports = {
-    Frame: require("./frames")
+
+    Frame: require("./frames"),
+  
+    User: require("./users"),
+
+    Cart: require("./cart")
+    
   };
   
