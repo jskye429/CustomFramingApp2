@@ -353,7 +353,7 @@ const frameSeed = [
       width:"4 3/4",
       catalogpage:"G-29",
       price:"15"
-    },
+    }
 
 ];
 

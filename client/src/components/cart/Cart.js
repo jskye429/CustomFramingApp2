@@ -1,7 +1,14 @@
 import React from "react";
 
-function Cart() {
-  return <h1>cart works</h1>;
+function Cart(){
+
+
+    return (
+      <div>
+        "hello"
+      </div>
+    )
+  
 }
 
 export default Cart;
