@@ -1,13 +1,16 @@
 import React from "react"
+import "./modal.css"
 
 function ErrorModal(props){
     return(
-        <div>
-            <div className= {`modal ${props.successModal}`}>
+ 
+            <div className= {`modal ${props.errorType}`}>
                 <div className="modal-background"></div>
-                    <div className="modal-card is-small">
+     
+                    <div className="modal-card">
                         <section className="modal-card-body">
-                            <p>Please complete all fields</p>
+                            <p>{props.text1}</p>
+                            <p>{props.text2}</p>
                         </section>
                         <footer className="modal-card-foot">
                             <button 
@@ -16,8 +19,9 @@ function ErrorModal(props){
                             >OK</button>
                         </footer>           
                     </div>
+            
             </div>
-        </div>
+   
     )
 }
 

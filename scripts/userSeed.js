@@ -13,21 +13,18 @@ mongoose.connect(
         firstName: "Ellen",
         lastName: "White",
         email: "evwhite@gmail.com",
-        userName: "evwhite",
         password: "password"
     },
     {
         firstName: "Jacquline",
         lastName: "Cameron",
         email: "jcameron@gmail.com",
-        userName: "jcameron",
         password: "password"
     },
     {
         firstName: "Dwayne",
         lastName: "Laughlin",
         email: "dlaughlin@gmail.com",
-        userName: "dlaughlin",
         password: "password"
     },
 
