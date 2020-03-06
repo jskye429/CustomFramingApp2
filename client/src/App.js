@@ -9,8 +9,6 @@ import QuoteSpec from "./components/Quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
 
 
-import NavBar from "./components/login/Login";
-
 
 
 function App() {
@@ -18,7 +16,6 @@ function App() {
     <BrowserRouter>
       <div>
         <Nav />
-        <NavBar />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/Cart" component={Cart} />
