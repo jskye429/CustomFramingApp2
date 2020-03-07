@@ -41,4 +41,15 @@ router.post("/list/:id", (req, res) =>{
         //  res.status(422).json(err)
 })
 
+router.delete("/list/:item", (req, res) =>{
+    // var user = req.params.id;
+    var item = req.params.item
+
+    Cart.findByIdAndDelete({_id: item}).then(data=>{
+        console.log("check 1: ", data)
+        // location.reload()
+    }).catch(err => console.log(err))
+
+})
+
 module.exports = router;
