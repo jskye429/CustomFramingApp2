@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import NewUserModal from "./Modals/SuccessModal"
 import Section from "../Section"
+import SuccessModal from "./Modals/SuccessModal";
+import ErrorModal from "./Modals/ErrorModal";
+import "./login.css"
 
 class newUser extends Component {
 
@@ -9,11 +11,13 @@ class newUser extends Component {
         firstName: "",
         lastName: "", 
         email: "",
-        userName: "",
         password: "",
         successModal: "",
-        errorModal: ""
+        errorModal: "",
+        emailRej: "",
+        errorEmailUse: {}        
     }
+
 
 submitForm = event =>{
 
@@ -23,19 +27,37 @@ submitForm = event =>{
         firstName: this.state.firstName,
         lastName: this.state.lastName,
         email: this.state.email,
-        userName: this.state.userName,
         password: this.state.password
     }
+    
+   //this next "if" statement is making sure a password string is passed here before it goes to router since Bcrypt will automatically convert it to a random string
+    if(newUserData.password===""){ 
+        this.setState({errorModal: "is-active"});
+        return;
+    }
+    console.log(newUserData)
     axios.post("/api/users/signUp", {newUserData})
     .then(response=>{
-        console.log(response)
-    }).catch(err=>{alert("please fill out all fields")})
+       if(response.data.acceptance){ //if new email accepted
+            this.setState({successModal: "is-active"});
+        }else if(response.data.email){ //if email already in use
+            this.setState({errorEmailUse: response.data}, ()=>{
+            this.setState({emailRej: "is-active"})
+            })
+        }
+    }).catch(err=>{ //if not all fields are complete
+        console.log(err)
+        this.setState({errorModal: "is-active"})})
 }
 
 handleExit = () => {
     this.setState({successModal: ""})
 }
-
+handleErrorExit = () =>{ 
+    this.setState({errorModal: ""}, ()=>{
+        this.setState({emailRej: ""})
+    })
+}
 handleFirstName = event =>{
     event.preventDefault()
     this.setState({firstName: event.target.value})
@@ -47,10 +69,6 @@ handleLastName = event =>{
 handleEmail = event =>{
     event.preventDefault()
     this.setState({email: event.target.value})
-}
-handleUsername = event =>{
-    event.preventDefault()
-    this.setState({userName: event.target.value})
 }
 handlePassword = event =>{
     event.preventDefault()
@@ -64,11 +82,13 @@ render(){
     <Section>
         <div className="container has-text-centered">
         
-          <div className="column is-6 is-offset-3">
+          <div className="column is-8 is-offset-2">
             <h3 className="title has-text-black">Sign Up New User</h3>
             <hr className="login-hr"/>
 
                 <form>
+                    <div className="field is-grouped">
+      
                     <div className="field is-half is-pulled-left">
                         <div className="control">
                             <input  
@@ -92,8 +112,12 @@ render(){
                             onChange={this.handleLastName}/>
                         </div>
                     </div>
-
-                    <div className="field">
+                    
+                    </div>
+                   
+                    <div className="field is-grouped">
+                    
+                    <div className="field is-half is-pulled-left">
                         <div className="control">
                             <input 
                             value={this.state.email}
@@ -102,19 +126,6 @@ render(){
                             onChange={this.handleEmail}/>
                         </div>
                     </div>
-
-                    <div className="field is-half is-pulled-left">
-                        <div className="control">
-                            <input  
-                            value={this.state.userName} 
-                            className="input is-med" 
-                            type="text" 
-                            placeholder="Username" 
-                            autoFocus=""
-                            onChange={this.handleUsername}/>
-                        </div>
-                    </div>
-            
 
                     <div className="field is-half is-pulled-right">
                         <div className="control">
@@ -126,23 +137,40 @@ render(){
                             onChange={this.handlePassword}/>
                         </div>
                     </div> 
+                    
+                    </div>
+           
     
                     <button 
                     className="button is-block is-success is-med is-fullwidth"
                     type="submit"
                     onClick={this.submitForm}
-                    >Login <i className="fa fa-sign-in" aria-hidden="true"></i></button>
+                    >Sign Up<i className="fa fa-sign-in" aria-hidden="true"></i></button>
 
                 </form>
         
                 <hr className="login-hr"/>
-                <p className="has-text-black">New User? <a href="../">Sign Up Here</a></p>
+                <p className="has-text-black">Already have a Login? <a href="/Login">Login Here</a></p>
+          
           </div>
         </div>
-    <NewUserModal
-    activeModal={this.setState.activeModal}
+     <SuccessModal
+    successModal={this.state.successModal}
     firstName={this.state.firstName}
     handleExit={this.handleExit}
+    />
+
+          <ErrorModal
+    errorType={this.state.errorModal}
+    text1="Please complete all fields."
+    handleErrorExit={this.handleErrorExit}
+    />
+
+    <ErrorModal
+    errorType={this.state.emailRej}
+    text1= {this.state.errorEmailUse.email} 
+    text2= {this.state.errorEmailUse.message}
+    handleErrorExit={this.handleErrorExit}
     />
 
     </Section>
