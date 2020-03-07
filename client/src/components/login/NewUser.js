@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Section from "../Section"
 import SuccessModal from "./Modals/SuccessModal";
-import Section from "../Section";
 import ErrorModal from "./Modals/ErrorModal";
 import "./login.css"
 
@@ -15,8 +15,9 @@ class newUser extends Component {
         successModal: "",
         errorModal: "",
         emailRej: "",
-        errorEmailUse: {}
+        errorEmailUse: {}        
     }
+
 
 submitForm = event =>{
 
@@ -28,7 +29,8 @@ submitForm = event =>{
         email: this.state.email,
         password: this.state.password
     }
-    //this next "if" statement is making sure a password string is passed here before it goes to router since Bcrypt will automatically convert it to a random string
+    
+   //this next "if" statement is making sure a password string is passed here before it goes to router since Bcrypt will automatically convert it to a random string
     if(newUserData.password===""){ 
         this.setState({errorModal: "is-active"});
         return;
@@ -36,7 +38,7 @@ submitForm = event =>{
     console.log(newUserData)
     axios.post("/api/users/signUp", {newUserData})
     .then(response=>{
-        if(response.data.acceptance){ //if new email accepted
+       if(response.data.acceptance){ //if new email accepted
             this.setState({successModal: "is-active"});
         }else if(response.data.email){ //if email already in use
             this.setState({errorEmailUse: response.data}, ()=>{
@@ -83,10 +85,10 @@ render(){
           <div className="column is-8 is-offset-2">
             <h3 className="title has-text-black">Sign Up New User</h3>
             <hr className="login-hr"/>
-                
-            <form>
-                
-                <div className="field is-grouped">
+
+                <form>
+                    <div className="field is-grouped">
+      
                     <div className="field is-half is-pulled-left">
                         <div className="control">
                             <input  
@@ -108,26 +110,23 @@ render(){
                             placeholder="Last Name" 
                             autoFocus=""
                             onChange={this.handleLastName}/>
-                        </div> 
+                        </div>
                     </div>
-
+                    
                     </div>
-
+                   
                     <div className="field is-grouped">
-
+                    
                     <div className="field is-half is-pulled-left">
                         <div className="control">
-                            <input  
-                            value={this.state.email} 
-                            className="input is-med" 
-                            type="text" 
-                            placeholder="Email" 
+                            <input 
+                            value={this.state.email}
+                            className="input is-med" type="text" placeholder="Email Address" 
                             autoFocus=""
                             onChange={this.handleEmail}/>
                         </div>
                     </div>
-            
- 
+
                     <div className="field is-half is-pulled-right">
                         <div className="control">
                             <input 
@@ -138,28 +137,30 @@ render(){
                             onChange={this.handlePassword}/>
                         </div>
                     </div> 
-
+                    
                     </div>
-
+           
+    
                     <button 
-                    className="button is-block is-success is-med"
+                    className="button is-block is-success is-med is-fullwidth"
                     type="submit"
                     onClick={this.submitForm}
-                    >Sign Up <i className="fa fa-sign-in" aria-hidden="true"></i></button>
+                    >Sign Up<i className="fa fa-sign-in" aria-hidden="true"></i></button>
 
                 </form>
         
                 <hr className="login-hr"/>
                 <p className="has-text-black">Already have a Login? <a href="/Login">Login Here</a></p>
+          
           </div>
         </div>
-    <SuccessModal
+     <SuccessModal
     successModal={this.state.successModal}
     firstName={this.state.firstName}
     handleExit={this.handleExit}
     />
 
-    <ErrorModal
+          <ErrorModal
     errorType={this.state.errorModal}
     text1="Please complete all fields."
     handleErrorExit={this.handleErrorExit}
