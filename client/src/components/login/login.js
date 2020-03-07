@@ -12,7 +12,7 @@ function Login() {
             <form>
               <div className="field">
                   <div className="control">
-                      <input className="input is-med" type="text" placeholder="Email" autofocus=""/>
+                      <input className="input is-med" type="text" placeholder="Username" autofocus=""/>
                   </div>
               </div>
 
