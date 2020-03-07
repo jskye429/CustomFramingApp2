@@ -10,18 +10,17 @@ router.get("/", (req, res)=>{
 
 router.get("/list/:id", (req, res) =>{
     var user = req.params.id;
-    console.log("this user: ", user)
+    console.log("getting cart for userID: ", user)
     Cart.find({userID: user}).then(data=>{
-        console.log("my data:", data)
+        console.log("Cart Itesm: ", data)
         res.json(data)
-    }).catch(err => console.log(err))
-        //  res.status(422).json("error", err))
+    }).catch(err => res.status(422).json(err))
 })
 
 
 router.post("/list/:id", (req, res) =>{
     var user = req.params.id;
-    console.log("adding new item to cart for user: ", user);
+    console.log("adding new item to cart for userID: ", user);
     //ready the incoming data to post
     var data = req.body;
     var newItemData = {
@@ -35,21 +34,17 @@ router.post("/list/:id", (req, res) =>{
     }
     //send new item to DB 
     Cart.create(newItemData).then(cartItems=>{
-        console.log("my cart:", cartItems)
         res.json(cartItems)
-    }).catch(err => console.log(err))
-        //  res.status(422).json(err)
+    }).catch(err => res.status(422).json(err))
 })
 
 router.delete("/list/:item", (req, res) =>{
-    // var user = req.params.id;
+    //delete item by its objectID in the cart table
     var item = req.params.item
-
     Cart.findByIdAndDelete({_id: item}).then(data=>{
-        console.log("check 1: ", data)
-        // location.reload()
-    }).catch(err => console.log(err))
-
+        res.send(data);
+        res.end();
+    }).catch(err => res.status(422).json(err))
 })
 
 module.exports = router;

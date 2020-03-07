@@ -22,7 +22,7 @@ function App() {
         <Route path="/quoteSpec/:sku" component={QuoteSpec} />
         <Route path="/list/:id" component={Cart} />
       </div>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
 

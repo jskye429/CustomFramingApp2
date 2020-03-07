@@ -3,24 +3,23 @@ import Section from "../Section";
 import Axios from "axios";
 import CartCard from "../Cards.js/CartCard";
 import Banner from "../Banner";
+import "./cart.css"
 
 class Cart extends Component{
 
   state={
     userID:"5e61ac00fc8f4e67c8568f12",
-    cart: []
+    cart: [],
+    apiUpdate: false
   }
+
 
   //NOTE FOR DEVELOPMENT: TABLE JOIN WHERE USER ID IS FOUND IN CART TABLE
   componentDidMount(){
     // const uid = this.props.match.params.id; //"id" must appear as it does in the API router parameters
     const uid = this.state.userID;
     Axios.get("/api/cart/list/" + uid).then(response =>{
-      console.log("axios response:", response)
-      this.setState({cart: response.data}, ()=>{
-        console.log("Cart: ", this.state.cart)
-      })
-      
+      this.setState({cart: response.data})
     })
   }
 
@@ -30,9 +29,17 @@ class Cart extends Component{
    const sku = event.target.itemsku
    console.log("deleting item ID: ", item, sku)
    Axios.delete("/api/cart/list/" +item).then(response =>{
-    this.forceUpdate()
+    console.log("post delete: ", response)
+    let updatedCart = this.state.cart.filter(items=>{
+      if(items._id === item){
+          return false
+      }
+      return true
+    })
+    this.setState({cart: updatedCart})
    })
  }
+
  
 render(){
     return (
@@ -42,7 +49,9 @@ render(){
        title="Cart"
        subtext="Review items and checkout."
        />
-
+        <div className="is-centered buff">
+         <a className="is-pulled-right is-primary" href="/">Back to Catalogue</a>
+        </div>
         {this.state.cart.map(item=>(
         <CartCard
         key={item._id}

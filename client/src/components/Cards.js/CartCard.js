@@ -3,9 +3,9 @@ import React from "react";
 function CartCard(props){
     return(
 <div className= "card">
-            {/* <div className="card-header">
-                {props.series} / {props.finish}
-            </div> */}
+            <div className="card-header">
+                {props.series} {props.finish}
+            </div>
             <div className="card-content">
                 <div>SKU: {props.sku}</div>
                 <div>Length: {props.length}</div>
