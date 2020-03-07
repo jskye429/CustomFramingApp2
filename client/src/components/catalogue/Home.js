@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-import Card from "../Cards/Card";
+import Banner from "../Banner";
+import Card from "../Cards.js/Card";
 import "./home.css";
 
 import axios from "axios"
@@ -29,12 +29,10 @@ class Home extends Component {
           
           <div className="columns is-vcentered">
             {/* banner */}
-            <div className="column banner">
-              <h1 className="title"> Custom Studio Frames</h1>
-              <p>
-                Find an estimate for your customized frame quickly and easily
-              </p>
-            </div>
+            <Banner
+            title="Custom Studio Frames"
+            subtext=" Find an estimate for your customized frame quickly and easily."
+            />
           </div>
         </div>
         <br></br>

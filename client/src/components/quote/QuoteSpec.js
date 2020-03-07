@@ -10,7 +10,7 @@ class QuoteSpec extends Component{
 
   
   state={
-    userID: "5e60428de672279aa8d30794", //hard coded to test, should be update when server is restarted to match the -id of user in your db you'd like to test, but we will get this update with authentification once we have it
+    userID: "5e61ac00fc8f4e67c8568f12", //hard coded to test, should be update when server is restarted to match the -id of user in your db you'd like to test, but we will get this update with authentification once we have it
     specData:{},
     height: Number,
     length: Number,
