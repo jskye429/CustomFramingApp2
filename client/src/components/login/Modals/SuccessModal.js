@@ -1,14 +1,12 @@
-import React from "react"
+import React from "react";
+import "./modal.css"
 
-function NewUserModal(props){
+function SuccessModal(props){
     return(
         <div>
             <div className= {`modal ${props.successModal}`}>
                 <div className="modal-background"></div>
                     <div className="modal-card is-small">
-                        <header className="modal-card-head">
-                            <p className="modal-card-title">Your Requested Quote</p>
-                        </header>
                         <section className="modal-card-body">
                             <p>Welcome {props.firstName}</p>
                         </section>
@@ -16,7 +14,7 @@ function NewUserModal(props){
                             <button 
                             className="button is-success"
                             onClick={props.handleExit}
-                            >OK</button>
+                            >Continue</button>
                         </footer>           
                     </div>
             </div>
@@ -24,4 +22,4 @@ function NewUserModal(props){
     )
 }
 
-export default NewUserModal
+export default SuccessModal
