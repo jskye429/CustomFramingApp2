@@ -18,9 +18,10 @@ function App() {
         <Nav />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/Cart" component={Cart} />
+        <Route exact path="/cart" component={Cart} />
         <Route exact path="/signUp" component={newUser} />
         <Route path="/quoteSpec/:sku" component={QuoteSpec} />
+        <Route path="/list/:id" component={Cart} />
       </div>
     </BrowserRouter>
   );

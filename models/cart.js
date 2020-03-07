@@ -8,11 +8,12 @@ const cartSchema = new Schema({
         ref: "User",
         required: true 
         },
-    sku: {
+    frameID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Frame",
         required: true
     },
+    sku: {type: Number, required: true},
     length: {type: Number, required: true},
     height: {type: Number, required: true},
     totalMeasure: {type: Number, require: true},
