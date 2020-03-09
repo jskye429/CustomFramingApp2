@@ -1,17 +1,15 @@
 import React from "react";
-import "./quote.css";
 
-function Modal(props){
+function RFQModal(props){
     return(
-        <div>
-        <div className= {`modal ${props.activeModal}`}>
+        <div className= {`modal ${props.RFQModal}`}>
             <div className="modal-background"></div>
-                <div style={{width: "300px"}} className="quote modal-card">
+                <div style={{width: "450px"}} className="quote modal-card">
                     <header className="modal-card-head">
                         <p className="modal-card-title">Your Requested Quote</p>
                     </header>
                     <section className="modal-card-body">
-                       <p>Total footage: {props.totalMeasure} FT</p> 
+                       <p>Total footage: {props.totalMeasure} Feet</p> 
                         <p>Total Price: ${props.cost}</p>
                     </section>
                     <footer className="modal-card-foot"> 
@@ -29,8 +27,7 @@ function Modal(props){
                     </footer>           
                 </div>
         </div>
-        </div>
     )
 }
 
-export default Modal
+export default RFQModal
