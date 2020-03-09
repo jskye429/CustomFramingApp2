@@ -9,8 +9,8 @@ function Card(props){
                 {props.series} / {props.finish}
             </div>
             <div className="card-content">
-                <div>Depth: {props.depth}</div>
-                <div>Width: {props.width}</div>
+                <div>Depth: {props.depth} inches</div>
+                <div>Width: {props.width} inches</div>
                 <div>Price/FT: ${(props.price)}.00</div>
                 <br/>
                 <button

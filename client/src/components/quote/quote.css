@@ -2,8 +2,13 @@
     background-color: lightblue;
     border-radius: 5px;
     color: rgb(55, 54, 109);
+    font-family: 'Heebo', sans-serif;
     padding-top:10px;
     padding-bottom: 10px;
+}
+
+.label{
+    font-family: 'Heebo', sans-serif;
 }
 
 .left-pad{

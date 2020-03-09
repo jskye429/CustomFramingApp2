@@ -55,6 +55,8 @@ class QuoteSpec extends Component{
       userID: this.state.userID,
       frameID: this.state.specData._id,
       sku: this.state.specData.sku,
+      series: this.state.specData.series,
+      finish: this.state.specData.finish,
       height: this.state.height, 
       length: this.state.length, 
       totalMeasure: this.state.totalMeasure, 
@@ -112,13 +114,13 @@ class QuoteSpec extends Component{
 
         </div>
 
-        <Modal
-        activeModal={this.state.activeModal}
-        totalMeasure= {this.state.totalMeasure}
-        cost={this.state.cost}
-        handleCart={this.handleCart}
-        handleExit={this.handleExit}
-        />
+          <Modal
+          activeModal={this.state.activeModal}
+          totalMeasure= {this.state.totalMeasure}
+          cost={this.state.cost}
+          handleCart={this.handleCart}
+          handleExit={this.handleExit}
+          />
 
       </div>
       </Section>

@@ -1,5 +1,14 @@
 .banner{
     background-color: lightblue;
     border-radius: 5px;
+ 
+}
+.title{
     color: rgb(55, 54, 109);
+    font-family: 'Heebo', sans-serif;
+}
+p{
+    color: whitesmoke;
+    font-weight: 400;
+    font-family: 'Montserrat Alternates', sans-serif;
 }

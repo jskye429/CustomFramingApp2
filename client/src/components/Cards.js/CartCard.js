@@ -3,19 +3,19 @@ import React from "react";
 function CartCard(props){
     return(
 <div className= "card">
-            <div className="card-header">
+            <div className="cart card-header">
                 {props.series} {props.finish}
             </div>
-            <div className="card-content">
+            <div className="cart card-content">
                 <div>SKU: {props.sku}</div>
-                <div>Length: {props.length}</div>
-                <div>Height: {(props.height)}</div>
+                <div>Length: {props.length} inches</div>
+                <div>Height: {props.height} inches</div>
                 <div>Cost: ${props.cost}.00</div>
                 
             </div>
-            <div className="card-footer">
+            <div className="cart card-footer">
                 <button
-                className="button is-info is-med"
+                className="button del is-med"
                 onClick={props.deleteCart} 
                 value= {props.value}
                 itemsku={props.itemsku}

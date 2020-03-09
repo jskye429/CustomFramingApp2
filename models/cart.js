@@ -12,6 +12,8 @@ const cartSchema = new Schema({
         ref: "Frame",
         required: true
     },
+    series: {type: String, required: true},
+    finish: {type: String, required: true},
     sku: {type: Number, required: true},
     length: {type: Number, required: true},
     height: {type: Number, required: true},
