@@ -3,7 +3,8 @@ import "./quote.css";
 import axios from "axios";
 import Section from "../Section";
 import calculate from "./js/RFQ"
-import Modal from "./Modal";
+import RFQModal from "./Modals/RFQModal";
+import RejModal from"./Modals/RejModal"
 import QuoteForm from "./QuoteForm";
 
 class QuoteSpec extends Component{
@@ -16,7 +17,8 @@ class QuoteSpec extends Component{
     length: Number,
     totalMeasure: Number,
     cost: Number,
-    activeModal: ""
+    RFQModal: "",
+    RejModal:""
   }  
 
   
@@ -39,13 +41,20 @@ class QuoteSpec extends Component{
 
   handleQuoteRequest= event =>{
     event.preventDefault()
-
+  
       this.setState({totalMeasure: calculate.footageCalc(this.state.length, this.state.height)}, ()=>{
 
         this.setState({cost: calculate.priceCalc(this.state.totalMeasure, this.state.specData.price)})
-
-        this.setState({activeModal: "is-active"})
+        this.callModals()
       })
+  }
+
+  callModals= () => {
+    if(this.state.totalMeasure === "NaN" || this.state.cost=== "NaN"){
+      this.setState({RejModal:"is-active"})
+      return;
+    }
+    this.setState({RFQModal: "is-active"})
   }
 
   handleCart = event =>{
@@ -67,12 +76,14 @@ class QuoteSpec extends Component{
     var postURL = `/api/cart/list/${this.state.userID}`
     axios.post(postURL, itemData).then(response=>{
       console.log("response from server",  response)
-      this.setState({activeModal: ""})
+      this.setState({RFQModal: ""})
     })
   }
 
   handleExit = () => {
-    this.setState({activeModal: ""})
+    this.setState({RFQModal: ""}, ()=>{
+      this.setState({RejModal: ""})
+    })
   } 
 
   render(){
@@ -114,12 +125,19 @@ class QuoteSpec extends Component{
 
         </div>
 
-          <Modal
-          activeModal={this.state.activeModal}
+          <RFQModal
+          RFQModal={this.state.RFQModal}
           totalMeasure= {this.state.totalMeasure}
           cost={this.state.cost}
           handleCart={this.handleCart}
           handleExit={this.handleExit}
+          />
+
+          <RejModal
+          RejModal={this.state.RejModal}
+          heading="Error"
+          text1="Please make sure all fields are filled out."
+          handleExit= {this.handleExit}
           />
 
       </div>
