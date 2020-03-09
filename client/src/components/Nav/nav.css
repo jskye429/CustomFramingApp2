@@ -1,0 +1,25 @@
+.button{
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.buttons{
+    justify-content: flex-end;
+}
+.navbar{
+    border-bottom:  rgb(55, 54, 109) 11px solid;
+    justify-content: space-between;
+    max-height: 65px;
+    padding: 10px;
+    padding-bottom:0px;
+}
+.logo{
+    font-size: 43px;
+    font-family: 'Heebo', sans-serif;
+}
+
+@media only screen and (max-width: 570px) {
+    .logo{
+        font-size: 25px;
+        font-family: 'Heebo', sans-serif;
+    }
+}

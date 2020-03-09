@@ -9,7 +9,9 @@ mongoose.connect(
   const cartSeed = [
     {
       userID: "5e61ac00fc8f4e67c8568f12", 
-      sku: "26986",
+      sku: "26956",
+      series:"Poems",
+      finish:"Matte Color",
       length: 48,
       height: 48,
       totalMeasure: 16,
@@ -18,6 +20,8 @@ mongoose.connect(
     {
         userID: "5e61ac00fc8f4e67c8568f12", 
         sku: "26958",
+        series:"Poems",
+        finish:"Matte Color",
         length: 48,
         height: 48,
         totalMeasure: 16,
@@ -26,6 +30,8 @@ mongoose.connect(
     {
         userID: "5e61ac00fc8f4e67c8568f13", 
         sku: "24901",
+        series:"Black 06",
+        finish:"Matte Black",
         length: 48,
         height: 48,
         totalMeasure: 16,
@@ -34,6 +40,8 @@ mongoose.connect(
     {
         userID: "5e61ac00fc8f4e67c8568f14", 
         sku: "63350",
+        series:"Armour",
+        finish:"Gold and Silver",
         length: 48,
         height: 48,
         totalMeasure: 16,

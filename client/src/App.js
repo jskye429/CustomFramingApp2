@@ -8,6 +8,7 @@ import NavBar from "./components/Login/authenticate";
 import Login from "./components/Login/Login";
 import QuoteSpec from "./components/Quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
+import Art from "./components/Art/Art";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/shopart" component={Art} />
         <Route exact path="/signUp" component={newUser} />
         <Route path="/quoteSpec/:sku" component={QuoteSpec} />
         <Route path="/list/:id" component={Cart} />

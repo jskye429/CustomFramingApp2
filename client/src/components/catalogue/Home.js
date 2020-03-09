@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Banner from "../Banner";
 import Card from "../Cards.js/Card";
+import Section from "../Section";
 import "./home.css";
-
 import axios from "axios"
 
 class Home extends Component {
@@ -10,6 +10,7 @@ class Home extends Component {
     frameData: [], 
     specData: []
   };
+
 
   componentDidMount(){
     axios.get("/api/frames").then(response =>{
@@ -22,19 +23,20 @@ class Home extends Component {
       window.location.href=`/quoteSpec/${spec}`
   };
 
+  
+
   render() {
     return (
-      <div className="section">
-        <div className="container">
+      <Section>
           
           <div className="columns is-vcentered">
             {/* banner */}
             <Banner
-            title="Custom Studio Frames"
+            title="Catalog"
             subtext=" Find an estimate for your customized frame quickly and easily."
             />
           </div>
-        </div>
+      
         <br></br>
 
         
@@ -52,8 +54,7 @@ class Home extends Component {
             />
           </div>
         ))}
-        {/* end */}
-      </div>
+        </Section>
     );
   }
 }

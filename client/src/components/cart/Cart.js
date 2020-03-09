@@ -9,8 +9,7 @@ class Cart extends Component{
 
   state={
     userID:"5e61ac00fc8f4e67c8568f12",
-    cart: [],
-    apiUpdate: false
+    cart: []
   }
 
 
@@ -56,6 +55,8 @@ render(){
         <CartCard
         key={item._id}
         value={item._id}
+        series={item.series}
+        finish={item.finish}
         sku={item.sku}
         length={item.length}
         height={item.height}
@@ -63,6 +64,10 @@ render(){
         deleteCart={this.deleteCart}
         />
         ))}
+        </div>
+
+        <div>
+          {/* Subtotal:{} */}
         </div>
       </Section> 
     )

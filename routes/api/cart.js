@@ -10,9 +10,9 @@ router.get("/", (req, res)=>{
 
 router.get("/list/:id", (req, res) =>{
     var user = req.params.id;
-    console.log("getting cart for userID: ", user)
+    // console.log("getting cart for userID: ", user)
     Cart.find({userID: user}).then(data=>{
-        console.log("Cart Itesm: ", data)
+        // console.log("Cart Itesm: ", data)
         res.json(data)
     }).catch(err => res.status(422).json(err))
 })
@@ -27,6 +27,8 @@ router.post("/list/:id", (req, res) =>{
         userID: data.userID,
         frameID: data.frameID,
         sku: data.sku,
+        series: data.series,
+        finish: data.finish,
         length: data.length,
         height: data.height,
         totalMeasure: data.totalMeasure,
