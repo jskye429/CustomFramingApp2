@@ -17,7 +17,8 @@ const frameSeed = [
         depth:"1 7/8",
         width:"2 1/2",
         catalogpage:"H-3",
-        price:"7"
+        price:"7",
+        nickname:"matteBlack"
       },
     { 
       sku: "24401",
@@ -26,7 +27,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"3",
       catalogpage:"H-3",
-      price:"10"
+      price:"10",
+      nickname:"matteBlack"
     },
   {   
     sku: "24601",
@@ -35,7 +37,8 @@ const frameSeed = [
       depth:"8",
       width:"2",
       catalogpage:"H-3",
-      price:"7"
+      price:"7",
+      nickname:"matteBlack"
 
     },
     {
@@ -45,8 +48,8 @@ const frameSeed = [
       depth:"8",
       width:"2 3/4",
       catalogpage:"H-3",
-      price:"6"
-
+      price:"6",
+      nickname:"matteBlack"
     },
     {
       sku: "24701",
@@ -55,7 +58,8 @@ const frameSeed = [
       depth:"1 7/8",
       width:"1",
       catalogpage:"H-3",
-      price:"8"
+      price:"8",
+      nickname:"matteBlack"
     },
     {
       sku: "24801",
@@ -64,7 +68,8 @@ const frameSeed = [
       depth:"1 1/2",
       width:"4",
       catalogpage:"H-27",
-      price:"6"
+      price:"6",
+      nickname:"matteBlack"
     },
     {
       sku: "24901",
@@ -73,7 +78,8 @@ const frameSeed = [
       depth:"2 5/8",
       width:"13/16",
       catalogpage:"H-27",
-      price:"6"
+      price:"6",
+      nickname:"matteBlack"
     },
     {
       sku: "25001",
@@ -82,7 +88,8 @@ const frameSeed = [
       depth:"3 1/8",
       width:"1 1/8",
       catalogpage:"H-27",
-      price:"7"
+      price:"7",
+      nickname:"matteBlack"
     },
     {
       sku: "25101",
@@ -91,7 +98,8 @@ const frameSeed = [
       depth:"1 7/8",
       width:"1 1/2",
       catalogpage:"H-27",
-      price:"9"
+      price:"9",
+      nickname:"matteBlack"
     },
     {
       sku: "26952",
@@ -100,7 +108,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname:"matteColor"
     },
     {
       sku: "26954",
@@ -109,7 +118,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26955",
@@ -118,7 +128,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26956",
@@ -127,7 +138,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26957",
@@ -136,7 +148,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26958",
@@ -145,7 +158,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26959",
@@ -154,7 +168,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26960",
@@ -163,7 +178,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26961",
@@ -172,7 +188,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26963",
@@ -181,7 +198,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26964",
@@ -190,7 +208,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26965",
@@ -199,7 +218,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26966",
@@ -208,7 +228,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26967",
@@ -217,7 +238,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26968",
@@ -226,7 +248,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26969",
@@ -235,7 +258,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26970",
@@ -244,7 +268,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "26971",
@@ -253,7 +278,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "22057",
@@ -262,7 +288,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "22060",
@@ -271,7 +298,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "22070",
@@ -280,7 +308,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14"
+      price:"14",
+      nickname: "matteColor"
     },
     {
       sku: "62320",
@@ -289,7 +318,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "62330",
@@ -298,7 +328,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "62340",
@@ -307,7 +338,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "62350",
@@ -316,7 +348,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "63320",
@@ -325,7 +358,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"1 3/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "63330",
@@ -334,7 +368,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"2 3/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "63340",
@@ -343,7 +378,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"3 3/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     },
     { 
       sku: "63350",
@@ -352,7 +388,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"4 3/4",
       catalogpage:"G-29",
-      price:"15"
+      price:"15",
+      nickname: "metallic"
     }
 
 ];

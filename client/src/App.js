@@ -9,6 +9,9 @@ import Login from "./components/Login/Login";
 import QuoteSpec from "./components/Quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
 import Art from "./components/Art/Art";
+import Framepics from "./components/Framepics/Framepics";
+
+
 
 
 function App() {
