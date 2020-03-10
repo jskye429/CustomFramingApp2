@@ -10,15 +10,14 @@ const frameSchema = new Schema({
     height:{ type: String, required: true },
     width:{ type: String, required: true },
     catalog_page:{ type: String, required: true },
-    price_per_foot:{ type: String, required: true },
-
+    price:{ type: String, required: true },
+    img: {type: String, require: false}
 });
 
 const Frame = mongoose.model("Frame", frameSchema);
 
 
 module.exports = Frame;
-// module.exports = mongoose.model('frameSchema', frameSchema);
 
 
 

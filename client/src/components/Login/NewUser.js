@@ -35,7 +35,7 @@ submitForm = event =>{
         this.setState({errorModal: "is-active"});
         return;
     }
-    console.log(newUserData)
+
     axios.post("/api/users/signUp", {newUserData})
     .then(response=>{
        if(response.data.acceptance){ //if new email accepted
@@ -81,7 +81,7 @@ render(){
 
     <Section>
         <div className="container has-text-centered">
-        
+        <div className="columns">
           <div className="column is-8 is-offset-2">
             <h3 className="title has-text-black">Sign Up New User</h3>
             <hr className="login-hr"/>
@@ -154,13 +154,14 @@ render(){
           
           </div>
         </div>
+        </div>
      <SuccessModal
     successModal={this.state.successModal}
     firstName={this.state.firstName}
     handleExit={this.handleExit}
     />
 
-          <ErrorModal
+    <ErrorModal
     errorType={this.state.errorModal}
     text1="Please complete all fields."
     handleErrorExit={this.handleErrorExit}

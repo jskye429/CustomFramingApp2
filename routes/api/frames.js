@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const framescontroller = require("../../controllers/framescontroller.js");
 const Frame = require("../../models/frames");
 
 router.get("/", (req, res) => {

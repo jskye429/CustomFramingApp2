@@ -4,7 +4,6 @@ import Nav from "./components/Nav/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/catalogue/Home";
 import Cart from "./components/Cart/Cart";
-import NavBar from "./components/Login/authenticate";
 import Login from "./components/Login/Login";
 import QuoteSpec from "./components/quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
@@ -15,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Nav /><NavBar />
+        <Nav />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cart" component={Cart} />

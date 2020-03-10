@@ -4,6 +4,7 @@ import Card from "../Cards/Card";
 import Section from "../Section";
 import "./home.css";
 import axios from "axios"
+import "../../images/logo.png"
 
 class Home extends Component {
   state = {
@@ -14,6 +15,7 @@ class Home extends Component {
 
   componentDidMount(){
     axios.get("/api/frames").then(response =>{
+      console.log(response.data)
       this.setState({frameData: response.data})
     })
   }
@@ -51,6 +53,7 @@ class Home extends Component {
               price={item.price}
               sku={item.sku}
               handleView={this.handleView}
+              img={item.img}
             />
           </div>
         ))}
