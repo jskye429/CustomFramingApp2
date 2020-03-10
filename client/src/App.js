@@ -3,11 +3,11 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/catalogue/Home";
-import Cart from "./components/Cart34/Cart";
-import NavBar from "./components/Login12/authenticate";
-import Login from "./components/Login12/Login";
-import QuoteSpec from "./components/Quote/QuoteSpec";
-import newUser from "./components/Login12/NewUser";
+import Cart from "./components/Cart/Cart";
+import NavBar from "./components/Login/authenticate";
+import Login from "./components/Login/Login";
+import QuoteSpec from "./components/quote/QuoteSpec";
+import newUser from "./components/Login/NewUser";
 import Art from "./components/Art/Art";
 
 
