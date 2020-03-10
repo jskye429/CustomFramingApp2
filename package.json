@@ -1,5 +1,5 @@
 {
-  "name": "CustomFramingApp2",
+  "name": "CustomFramingApp2020",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jskye429/CustomFramingApp2.git"
+    "url": "git+https://github.com/evwhite2/CustomFramingApp2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jskye429/CustomFramingApp2/issues"
+    "url": "https://github.com/evwhite2/CustomFramingApp2/issues"
   },
-  "homepage": "https://github.com/jskye429/CustomFramingApp2#readme",
+  "homepage": "https://github.com/evwhite2/CustomFramingApp2#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
