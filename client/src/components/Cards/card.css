@@ -1,0 +1,27 @@
+.card{
+    border-radius: 5px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.card-footer{
+    font-size: 12px;
+    justify-content: left;
+    margin: 5px;
+}
+.card-header{
+    border-radius: 5px;
+    background-color: lightblue;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    padding: 10px
+}
+.del{
+    background-color: transparent;
+    color: rgb(218, 23, 23);
+    font-family: 'Heebo', sans-serif;
+}
+.is-small{
+    font-family: 'Heebo', sans-serif;
+}
