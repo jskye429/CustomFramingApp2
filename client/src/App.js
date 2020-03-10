@@ -10,6 +10,7 @@ import QuoteSpec from "./components/Quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
 import Art from "./components/Art/Art";
 
+//well lets just commit something
 
 function App() {
   return (
