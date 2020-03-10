@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Section from "../Section";
 import Axios from "axios";
-import CartCard from "../Cards.js/CartCard";
+import CartCard from "../Cards/CartCard";
 import Banner from "../Banner";
 import "./cart.css"
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Banner from "../Banner";
-import Card from "../Cards.js/Card";
+import Card from "../Cards/Card";
 import Section from "../Section";
 import "./home.css";
 import axios from "axios"
