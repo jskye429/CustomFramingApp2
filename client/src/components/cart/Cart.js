@@ -12,7 +12,6 @@ class Cart extends Component{
     cart: []
   }
 
-
   //NOTE FOR DEVELOPMENT: TABLE JOIN WHERE USER ID IS FOUND IN CART TABLE
   componentDidMount(){
     // const uid = this.props.match.params.id; //"id" must appear as it does in the API router parameters
