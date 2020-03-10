@@ -13,7 +13,7 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "echo Skip build on Heroku",
     "seed": "node scripts/seedDB.js",
     "seedUsers": "node scripts/userSeed.js",
     "seedCart": "node scripts/cartSeed.js"
