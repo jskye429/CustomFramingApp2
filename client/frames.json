@@ -1,6 +1,6 @@
-/* 1 */
+[
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b71"),
+    "_id" : "5e672cd9fce74d3044bb0b71",
     "sku" : "24301",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -9,11 +9,9 @@
     "catalogpage" : "H-3",
     "price" : "7",
     "img" : "../../images/logo.png"
-}
-
-/* 2 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b72"),
+    "_id" : "5e672cd9fce74d3044bb0b72",
     "sku" : "24401",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -22,11 +20,9 @@
     "catalogpage" : "H-3",
     "price" : "10",
     "img" : "../../images/logo.png"
-}
-
-/* 3 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b73"),
+    "_id" :"5e672cd9fce74d3044bb0b73",
     "sku" : "24601",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -35,11 +31,9 @@
     "catalogpage" : "H-3",
     "price" : "7",
     "img" : "../../images/logo.png"
-}
-
-/* 4 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b74"),
+    "_id" : "5e672cd9fce74d3044bb0b74",
     "sku" : "24501",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -48,11 +42,9 @@
     "catalogpage" : "H-3",
     "price" : "6",
     "img" : "../../images/logo.png"
-}
-
-/* 5 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b75"),
+    "_id" : "5e672cd9fce74d3044bb0b75",
     "sku" : "24701",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -61,11 +53,9 @@
     "catalogpage" : "H-3",
     "price" : "8",
     "img" : "../../images/logo.png"
-}
-
-/* 6 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b76"),
+    "_id" : "5e672cd9fce74d3044bb0b76",
     "sku" : "24801",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -78,7 +68,7 @@
 
 /* 7 */
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b77"),
+    "_id" : "5e672cd9fce74d3044bb0b77",
     "sku" : "24901",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -87,11 +77,9 @@
     "catalogpage" : "H-27",
     "price" : "6",
     "img" : "../../images/logo.png"
-}
-
-/* 8 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b78"),
+    "_id" : "5e672cd9fce74d3044bb0b78",
     "sku" : "25001",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -100,11 +88,9 @@
     "catalogpage" : "H-27",
     "price" : "7",
     "img" : "../../images/logo.png"
-}
-
-/* 9 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b79"),
+    "_id" : "5e672cd9fce74d3044bb0b79",
     "sku" : "25101",
     "series" : "Black 06",
     "finish" : "Matte Black",
@@ -113,11 +99,9 @@
     "catalogpage" : "H-27",
     "price" : "9",
     "img" : "../../images/logo.png"
-}
-
-/* 10 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7a"),
+    "_id" : "5e672cd9fce74d3044bb0b7a",
     "sku" : "26952",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -126,11 +110,9 @@
     "catalogpage" : "H-35",
     "price" : "14",
     "img" : "../../images/logo.png"
-}
-
-/* 11 */
+},
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7b"),
+    "_id" : "5e672cd9fce74d3044bb0b7b",
     "sku" : "26954",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -141,7 +123,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7c"),
+    "_id" : "5e672cd9fce74d3044bb0b7c",
     "sku" : "26955",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -152,7 +134,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7d"),
+    "_id" : "5e672cd9fce74d3044bb0b7d",
     "sku" : "26956",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -163,7 +145,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7e"),
+    "_id" : "5e672cd9fce74d3044bb0b7e",
     "sku" : "26957",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -174,7 +156,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b7f"),
+    "_id" : "5e672cd9fce74d3044bb0b7f",
     "sku" : "26958",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -185,7 +167,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b80"),
+    "_id" : "5e672cd9fce74d3044bb0b80",
     "sku" : "26959",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -196,7 +178,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b81"),
+    "_id" : "5e672cd9fce74d3044bb0b81",
     "sku" : "26960",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -207,7 +189,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b82"),
+    "_id" : "5e672cd9fce74d3044bb0b82",
     "sku" : "26961",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -218,7 +200,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b83"),
+    "_id" : "5e672cd9fce74d3044bb0b83",
     "sku" : "26963",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -229,7 +211,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b84"),
+    "_id" : "5e672cd9fce74d3044bb0b84",
     "sku" : "26964",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -240,7 +222,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b85"),
+    "_id" : "5e672cd9fce74d3044bb0b85",
     "sku" : "26965",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -251,7 +233,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b86"),
+    "_id" : "5e672cd9fce74d3044bb0b86",
     "sku" : "26966",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -262,7 +244,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b87"),
+    "_id" : "5e672cd9fce74d3044bb0b87",
     "sku" : "26967",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -273,7 +255,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b88"),
+    "_id" : "5e672cd9fce74d3044bb0b88",
     "sku" : "26968",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -284,7 +266,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b89"),
+    "_id" : "5e672cd9fce74d3044bb0b89",
     "sku" : "26969",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -295,7 +277,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8a"),
+    "_id" : "5e672cd9fce74d3044bb0b8a",
     "sku" : "26970",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -306,7 +288,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8b"),
+    "_id" : "5e672cd9fce74d3044bb0b8b",
     "sku" : "26971",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -317,7 +299,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8c"),
+    "_id" : "5e672cd9fce74d3044bb0b8c",
     "sku" : "22057",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -328,7 +310,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8d"),
+    "_id" : "5e672cd9fce74d3044bb0b8d",
     "sku" : "22060",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -339,7 +321,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8e"),
+    "_id" : "5e672cd9fce74d3044bb0b8e",
     "sku" : "22070",
     "series" : "Poems",
     "finish" : "Matte Color",
@@ -350,7 +332,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b8f"),
+    "_id" : "5e672cd9fce74d3044bb0b8f",
     "sku" : "62320",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -361,7 +343,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b90"),
+    "_id" : "5e672cd9fce74d3044bb0b90",
     "sku" : "62330",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -372,7 +354,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b91"),
+    "_id" : "5e672cd9fce74d3044bb0b91",
     "sku" : "62340",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -383,7 +365,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b92"),
+    "_id" : "5e672cd9fce74d3044bb0b92",
     "sku" : "62350",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -394,7 +376,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b93"),
+    "_id" : "5e672cd9fce74d3044bb0b93",
     "sku" : "63320",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -405,7 +387,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b94"),
+    "_id" : "5e672cd9fce74d3044bb0b94",
     "sku" : "63330",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -416,7 +398,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b95"),
+    "_id" : "5e672cd9fce74d3044bb0b95",
     "sku" : "63340",
     "series" : "Armour",
     "finish" : "Gold and Silver",
@@ -427,7 +409,7 @@
     "img" : "../../images/logo.png"
 },
 {
-    "_id" : ObjectId("5e672cd9fce74d3044bb0b96"),
+    "_id" : "5e672cd9fce74d3044bb0b96",
     "sku" : "63350",
     "series" : "Armour",
     "finish" : "Gold and Silver",

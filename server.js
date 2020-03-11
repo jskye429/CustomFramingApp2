@@ -18,8 +18,10 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use("/", routes);
 
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/frames";
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_5875wdc2:5a7kms44ma8k50dgmgdhm6t6is@ds033797.mlab.com:33797/heroku_5875wdc2", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 const connection = mongoose.connection;
 connection.once('open', function() {
