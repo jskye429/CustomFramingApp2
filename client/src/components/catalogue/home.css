@@ -7,8 +7,18 @@
     color: rgb(55, 54, 109);
     font-family: 'Heebo', sans-serif;
 }
+.subtext{
+    color: whitesmoke;
+}
 p{
     color: whitesmoke;
     font-weight: 400;
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+@media screen and (max-width: 1025px)  {
+
+.banner{
+    margin-top:15px;
+}
 }

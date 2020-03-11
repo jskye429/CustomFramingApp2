@@ -4,6 +4,7 @@ import Axios from "axios";
 import CartCard from "../Cards/CartCard";
 import Banner from "../Banner";
 import "./cart.css"
+import img from "../../images/logo-light.png";
 
 class Cart extends Component{
 
@@ -60,6 +61,7 @@ render(){
         length={item.length}
         height={item.height}
         cost={item.cost}
+        img={img}
         deleteCart={this.deleteCart}
         />
         ))}

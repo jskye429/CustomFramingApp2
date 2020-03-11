@@ -1,18 +1,31 @@
 import React from "react";
 
+var imgStyle = {
+    height: "150px",
+    width: "150px"
+  };
+
+
 function CartCard(props){
     return(
 <div className= "card">
             <div className="cart card-header">
                 {props.series} {props.finish}
             </div>
-            <div className="cart card-content">
-                <div>SKU: {props.sku}</div>
-                <div>Length: {props.length} inches</div>
-                <div>Height: {props.height} inches</div>
-                <div>Cost: ${props.cost}.00</div>
+            <br/>
+            <div className="cart card-content is-pulled-left">
                 
+                    <div>SKU: {props.sku}</div>
+                    <div>Length: {props.length} inches</div>
+                    <div>Height: {props.height} inches</div>
+                    <div>Cost: ${props.cost}.00</div>
             </div>
+      
+                <img 
+                src= {props.img}
+                style={imgStyle}
+                />
+
             <div className="cart card-footer">
                 <button
                 className="button del is-med"

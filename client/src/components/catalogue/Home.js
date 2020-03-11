@@ -4,6 +4,8 @@ import Card from "../Cards/Card";
 import Section from "../Section";
 import "./home.css";
 import axios from "axios"
+import logo from "../../images/logo-light.png"
+
 
 class Home extends Component {
   state = {
@@ -11,19 +13,18 @@ class Home extends Component {
     specData: []
   };
 
-
   componentDidMount(){
+  
     axios.get("/api/frames").then(response =>{
+      console.log("axios response:", response.data)
       this.setState({frameData: response.data})
     })
   }
 
   handleView = event => {
-    const spec = event.target.attributes.getNamedItem("sku").value
-      window.location.href=`/quoteSpec/${spec}`
+    const spec = event.target.attributes.getNamedItem("sku").value;
+      window.location.href=`/quoteSpec/${spec}`;
   };
-
-  
 
   render() {
     return (
@@ -51,6 +52,7 @@ class Home extends Component {
               price={item.price}
               sku={item.sku}
               handleView={this.handleView}
+              img={logo}
             />
           </div>
         ))}
