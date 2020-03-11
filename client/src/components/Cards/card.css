@@ -25,3 +25,13 @@
 .is-small{
     font-family: 'Heebo', sans-serif;
 }
+.subtext{
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1025px)  {
+
+    .banner{
+        margin-top:15px;
+    }
+}

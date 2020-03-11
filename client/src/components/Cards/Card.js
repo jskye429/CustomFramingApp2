@@ -23,6 +23,7 @@ function Card(props){
                     <div className="column is-half is-pulled-right">
                         {props.img}
                         <img 
+                        alt="catalog"
                         style={imgStyle}
                         src={props.img}></img>
                     </div>

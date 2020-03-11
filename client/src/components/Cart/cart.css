@@ -1,8 +1,12 @@
 
-.buff{
-  padding: 15px
-}
 .cart{
   align-content: left;
   text-align: left;
+}
+
+@media screen and (max-width: 1025px)  {
+
+  .banner{
+      margin-top:15px;
+  }
 }
