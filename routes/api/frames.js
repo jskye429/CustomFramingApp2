@@ -3,6 +3,8 @@ const Frame = require("../../models/frames");
 
 router.get("/", (req, res) => {
     Frame.find().then(data => {
+
+    console.log("frames: ", data)
     res.json(data);
     })
 });
