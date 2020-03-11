@@ -4,9 +4,10 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const bodyParser = require("body-parser");
-const bcrypt = require("bcrypt")
 
 const PORT = process.env.PORT || 8081;
+
+const HOST = process.env.HOST || "custom-studio-frames-2020.herokuapp.com";
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -17,16 +18,20 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Connect to the Mongo DB------ MONGOD URI NEEDS TO BE UPDATED
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/frames", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://whitestudioframes2020:studio2020@ds033797.mlab.com:33797/heroku_5875wdc2";
+// Connect to the Mongo DB
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
+ 
 const connection = mongoose.connection;
 connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
-// Add routes, both API and view
 app.use("/", routes);
+ app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 
 // Start the API server
 app.listen(PORT, function() {

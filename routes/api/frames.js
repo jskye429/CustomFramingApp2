@@ -1,11 +1,10 @@
 const router = require("express").Router();
-const framescontroller = require("../../controllers/framescontroller.js");
 const Frame = require("../../models/frames");
 
 router.get("/", (req, res) => {
     Frame.find().then(data => {
     res.json(data);
-    })
+    }).catch(err => res.status(422).json(err))
 });
 
 router.get("/quoteSpec/:sku",(req, res) =>{

@@ -3,7 +3,6 @@ import React from "react";
 function QuoteForm(props){
     return(
         <form>
-        {/* ENTER A HEIGHT */}
         <label className="label">Please select dimensions in Inches</label>
         <div className="field">
           <label className="label">Height</label>
@@ -18,8 +17,7 @@ function QuoteForm(props){
             />
           </div>
         </div>
-
-        {/* ENTER A LENGTH */}
+      
         <div className="field">
           <label className="label">Length</label>
           <div className="control">
@@ -33,10 +31,9 @@ function QuoteForm(props){
             />
           </div>
         </div>
-
-        {/* SUBMIT BUTTON */}
+        
         <input 
-        className="button is-success" 
+        className="button calculate" 
         placeholder="Calculate"
         onClick={props.handleQuoteRequest}
         ></input>

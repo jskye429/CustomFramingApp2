@@ -4,8 +4,8 @@ import Nav from "./components/Nav/Nav";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/catalogue/Home";
 import Cart from "./components/Cart/Cart";
-import NavBar from "./components/login/authenticate";
-import Login from "./components/login/Login";
+import Login from "./components/Login/Login";
+import NavBar from "./components/Login/authenticate";
 import QuoteSpec from "./components/quote/QuoteSpec";
 import newUser from "./components/login/NewUser";
 import Art from "./components/Art/Art";
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Nav /><NavBar />
+        <Nav />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cart" component={Cart} />

@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 
 
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/frames"
+  process.env.MONGODB_URI || "mongodb://localhost/frames"
 );
 
 
@@ -17,8 +16,10 @@ const frameSeed = [
         depth:"1 7/8",
         width:"2 1/2",
         catalogpage:"H-3",
+
         price:"7", 
         img: "img"
+
       },
     { 
       sku: "24401",
@@ -39,7 +40,6 @@ const frameSeed = [
       catalogpage:"H-3",
       price:"7", 
       img: "img"
-
     },
     {
       sku: "24501",
@@ -50,7 +50,6 @@ const frameSeed = [
       catalogpage:"H-3",
       price:"6", 
       img: "img"
-
     },
     {
       sku: "24701",
