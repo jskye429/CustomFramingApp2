@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import Banner from "../Banner";
 import Card from "../Cards/Card";
 import Section from "../Section";
-import RejModal from "../quote/Modals/RejModal";
-import RFQModal from "../quote/Modals/RFQModal";
+import RejModal from "../Quote/Modals/RejModal";
+import RFQModal from "../Quote/Modals/RFQModal";
 import "./home.css";
 import axios from "axios"
 import logo from "../../images/logo-light.png"
 
-import calculate from "../quote/js/RFQ";
-import QuoteSpec from "../quote/QuoteSpec";
+import calculate from "../Quote/js/RFQ";
+import QuoteSpec from "../Quote/QuoteSpec";
 
 class Home extends Component {
   state = {

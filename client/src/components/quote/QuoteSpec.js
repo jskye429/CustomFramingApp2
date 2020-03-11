@@ -1,8 +1,6 @@
 import React from "react";
 import "./quote.css";
 import Section from "../Section";
-import RFQModal from "./Modals/RFQModal";
-import RejModal from"./Modals/RejModal"
 import QuoteForm from "./QuoteForm";
 
 
