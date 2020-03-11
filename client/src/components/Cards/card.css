@@ -21,6 +21,10 @@
     font-weight: 500;
     padding: 10px
 }
+.centered{
+    justify-content: center;
+    text-align: center;
+}
 .del{
     background-color: transparent;
     color: rgb(218, 23, 23);
