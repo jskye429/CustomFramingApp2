@@ -7,7 +7,7 @@ import Cart from "./components/Cart/Cart";
 import Login from "./components/Login/Login";
 import NavBar from "./components/Login/authenticate";
 import QuoteSpec from "./components/quote/QuoteSpec";
-import newUser from "./components/login/NewUser";
+import newUser from "./components/Login/NewUser";
 import Art from "./components/Art/Art";
 
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Nav />
+        <Nav /><NavBar />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cart" component={Cart} />
