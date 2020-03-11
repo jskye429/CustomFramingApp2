@@ -19,10 +19,11 @@ if (process.env.NODE_ENV === "production") {
 app.use("/", routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/frames", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_5875wdc2:5a7kms44ma8k50dgmgdhm6t6is@ds033797.mlab.com:33797/heroku_5875wdc2", { useNewUrlParser: true });
 
 const connection = mongoose.connection;
 connection.once('open', function() {
+    
     console.log("MongoDB database connection established successfully");
 })
 
