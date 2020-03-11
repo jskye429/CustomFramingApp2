@@ -31,6 +31,9 @@ connection.once('open', function() {
 })
 
 app.use("/", routes);
+ app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
 
 // Start the API server
 app.listen(PORT, function() {

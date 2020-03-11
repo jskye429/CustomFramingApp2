@@ -1,14 +1,27 @@
-.banner{
-    background-color: lightblue;
-    border-radius: 5px;
+p{
     color: rgb(55, 54, 109);
+}
+
+input{
+    border-radius: 2px;
+}
+
+.banner{
+    background-color: rgb(55, 54, 109);
+    border-radius: 5px;
+    color:whitesmoke;
     font-family: 'Heebo', sans-serif;
     padding-top:10px;
     padding-bottom: 10px;
 }
+.calculate{
+    background-color: whitesmoke;
+    color:rgb(55, 54, 109);
+}
 
 .label{
     font-family: 'Heebo', sans-serif;
+    color:whitesmoke;
 }
 
 .left-pad{
@@ -18,7 +31,15 @@
     padding-right: 75px;
 }
 
-p{
-    color: rgb(55, 54, 109);
+.smoke{
+    background-color:rgb(55, 54, 109);
+    color:whitesmoke;
+    border-radius: 5px;
+    padding-bottom: 20px;
 }
+
+
+
+
+
 

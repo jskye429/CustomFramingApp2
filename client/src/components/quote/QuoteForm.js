@@ -31,9 +31,9 @@ function QuoteForm(props){
             />
           </div>
         </div>
-
+        
         <input 
-        className="button " 
+        className="button calculate" 
         placeholder="Calculate"
         onClick={props.handleQuoteRequest}
         ></input>

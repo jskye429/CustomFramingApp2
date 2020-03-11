@@ -22,6 +22,7 @@ function CartCard(props){
             </div>
       
                 <img 
+                alt="item"
                 src= {props.img}
                 style={imgStyle}
                 />
