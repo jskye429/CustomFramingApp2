@@ -5,7 +5,7 @@ const routes = require("./routes");
 const app = express();
 const bodyParser = require("body-parser");
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 33797;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -15,9 +15,9 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-app.use("/", routes);
 
+ // Add routes, both API and view
+ app.use("/", routes);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://whitestudioframes2020:studio2020@ds033797.mlab.com:33797/heroku_5875wdc2";
 // Connect to the Mongo DB
@@ -25,10 +25,9 @@ mongoose.connect(MONGODB_URI);
 
 const connection = mongoose.connection;
 connection.once('open', function() {
-    
+ 
     console.log("MongoDB database connection established successfully");
 })
-
 
 // Start the API server
 app.listen(PORT, function() {
