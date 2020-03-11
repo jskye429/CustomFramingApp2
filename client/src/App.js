@@ -6,7 +6,7 @@ import Home from "./components/catalogue/Home";
 import Cart from "./components/Cart/Cart";
 import NavBar from "./components/Login/authenticate";
 import Login from "./components/Login/Login";
-import QuoteSpec from "./components/Quote/QuoteSpec";
+import QuoteSpec from "./components/quote/QuoteSpec";
 import newUser from "./components/Login/NewUser";
 import Art from "./components/Art/Art";
 

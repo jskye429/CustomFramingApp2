@@ -1,0 +1,8 @@
+.modal-card{
+    border-radius: 6px;
+    text-align: center;
+    width: 250px
+}
+.modal-card-foot{
+    justify-content: center;
+}
