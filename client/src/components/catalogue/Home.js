@@ -8,7 +8,6 @@ import "./home.css";
 import axios from "axios"
 import logo from "../../images/logo-light.png"
 
-//quoteSpec inports:
 import calculate from "../quote/js/RFQ";
 import QuoteSpec from "../quote/QuoteSpec";
 
@@ -30,7 +29,7 @@ class Home extends Component {
   componentDidMount(){
   
     axios.get("/api/frames").then(response =>{
-      console.log(response.data)
+      console.log("axios response:", response.data)
       this.setState({frameData: response.data})
     })
   }
@@ -107,7 +106,6 @@ class Home extends Component {
       this.setState({RejModal: ""})
     })
   } 
-
 
   render() {
     return (

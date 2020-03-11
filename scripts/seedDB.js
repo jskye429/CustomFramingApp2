@@ -16,8 +16,10 @@ const frameSeed = [
         depth:"1 7/8",
         width:"2 1/2",
         catalogpage:"H-3",
-        price:"7",
-        img: "../../images/logo.png"
+
+        price:"7", 
+        img: "img"
+
       },
     { 
       sku: "24401",
@@ -26,19 +28,18 @@ const frameSeed = [
       depth:"1 3/8",
       width:"3",
       catalogpage:"H-3",
-      price:"10",
-      img: "../../images/logo.png"
+      price:"10", 
+      img: "img"
     },
-  {   
+    {   
     sku: "24601",
       series:"Black 06",
       finish:"Matte Black",
       depth:"8",
       width:"2",
       catalogpage:"H-3",
-      price:"7",
-      img: "../../images/logo.png"
-
+      price:"7", 
+      img: "img"
     },
     {
       sku: "24501",
@@ -47,9 +48,8 @@ const frameSeed = [
       depth:"8",
       width:"2 3/4",
       catalogpage:"H-3",
-      price:"6",
-      img: "../../images/logo.png"
-
+      price:"6", 
+      img: "img"
     },
     {
       sku: "24701",
@@ -58,8 +58,8 @@ const frameSeed = [
       depth:"1 7/8",
       width:"1",
       catalogpage:"H-3",
-      price:"8",
-      img: "../../images/logo.png"
+      price:"8", 
+      img: "img"
     },
     {
       sku: "24801",
@@ -68,8 +68,8 @@ const frameSeed = [
       depth:"1 1/2",
       width:"4",
       catalogpage:"H-27",
-      price:"6",
-      img: "../../images/logo.png"
+      price:"6", 
+      img: "img"
     },
     {
       sku: "24901",
@@ -78,8 +78,8 @@ const frameSeed = [
       depth:"2 5/8",
       width:"13/16",
       catalogpage:"H-27",
-      price:"6",
-      img: "../../images/logo.png"
+      price:"6", 
+      img: "img"
     },
     {
       sku: "25001",
@@ -88,8 +88,8 @@ const frameSeed = [
       depth:"3 1/8",
       width:"1 1/8",
       catalogpage:"H-27",
-      price:"7",
-      img: "../../images/logo.png"
+      price:"7", 
+      img: "img"
     },
     {
       sku: "25101",
@@ -98,8 +98,8 @@ const frameSeed = [
       depth:"1 7/8",
       width:"1 1/2",
       catalogpage:"H-27",
-      price:"9",
-      img: "../../images/logo.png"
+      price:"9", 
+      img: "img"
     },
     {
       sku: "26952",
@@ -108,8 +108,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26954",
@@ -118,8 +118,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26955",
@@ -128,8 +128,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26956",
@@ -138,8 +138,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26957",
@@ -148,8 +148,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26958",
@@ -158,8 +158,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26959",
@@ -168,8 +168,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26960",
@@ -178,8 +178,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26961",
@@ -188,8 +188,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26963",
@@ -198,8 +198,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26964",
@@ -208,8 +208,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26965",
@@ -218,8 +218,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26966",
@@ -228,8 +228,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26967",
@@ -238,8 +238,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26968",
@@ -248,8 +248,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26969",
@@ -258,8 +258,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26970",
@@ -268,8 +268,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "26971",
@@ -278,8 +278,8 @@ const frameSeed = [
       depth:"8",
       width:"4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "22057",
@@ -288,8 +288,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "22060",
@@ -298,8 +298,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "22070",
@@ -308,8 +308,8 @@ const frameSeed = [
       depth:"8",
       width:"1 1/4",
       catalogpage:"H-35",
-      price:"14",
-      img: "../../images/logo.png"
+      price:"14", 
+      img: "img"
     },
     {
       sku: "62320",
@@ -318,8 +318,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "62330",
@@ -328,8 +328,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "62340",
@@ -338,8 +338,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "62350",
@@ -348,8 +348,8 @@ const frameSeed = [
       depth:"1 3/8",
       width:"1 1/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "63320",
@@ -358,8 +358,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"1 3/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "63330",
@@ -368,8 +368,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"2 3/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "63340",
@@ -378,8 +378,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"3 3/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     },
     { 
       sku: "63350",
@@ -388,8 +388,8 @@ const frameSeed = [
       depth:"1 1/4",
       width:"4 3/4",
       catalogpage:"G-29",
-      price:"15",
-      img: "../../images/logo.png"
+      price:"15", 
+      img: "img"
     }
 
 ];

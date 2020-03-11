@@ -5,8 +5,9 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/catalogue/Home";
 import Cart from "./components/Cart/Cart";
 import Login from "./components/Login/Login";
+import NavBar from "./components/Login/authenticate";
 import QuoteSpec from "./components/quote/QuoteSpec";
-import newUser from "./components/Login/NewUser";
+import newUser from "./components/login/NewUser";
 import Art from "./components/Art/Art";
 
 
