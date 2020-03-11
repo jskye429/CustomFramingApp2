@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 8081;
 
-const HOST = process.env.HOST || "custom-studio-frames-2020.herokuapp.com"
+const HOST = process.env.HOST || "custom-studio-frames-2020.herokuapp.com";
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
