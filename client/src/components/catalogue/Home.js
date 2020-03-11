@@ -6,6 +6,7 @@ import "./home.css";
 import axios from "axios"
 import "../../images/logo.png"
 
+
 class Home extends Component {
   state = {
     frameData: [], 
@@ -14,7 +15,10 @@ class Home extends Component {
 
 
   componentDidMount(){
-    axios.get("/api/frames").then(response =>{
+    const axiosInstance = axios.create({
+      baseURL: 'https://cors-anywhere.herokuapp.com/http://localhost:8081/'
+    })
+    axiosInstance.get("/api/frames").then(response =>{
       console.log(response.data)
       this.setState({frameData: response.data})
     })

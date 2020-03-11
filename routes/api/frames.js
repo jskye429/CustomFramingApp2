@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Frame = require("../../models/frames");
 
 router.get("/", (req, res) => {
-    Frame.find({}).then(data => {
+    Frame.find().then(data => {
     res.json(data);
     }).catch(err => res.status(422).json(err))
 });
