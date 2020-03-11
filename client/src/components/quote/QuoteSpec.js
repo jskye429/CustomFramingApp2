@@ -98,8 +98,8 @@ class QuoteSpec extends Component{
           Calculate Quote: "{this.state.specData.series}" {this.state.specData.sku}</h1>
         <br/> 
         <div className="columns">
-            <div className="column is-half v-centered left-pad">
 
+            <div className="column is-half left-pad is-pulled-left">
                 <label className="title">Specs</label>
                 <br/>
                 <br/>
@@ -108,22 +108,21 @@ class QuoteSpec extends Component{
                 <div>Finish: {this.state.specData.finish}</div>
                 <div>Depth: {this.state.specData.depth} inches</div>
                 <div>Width: {this.state.specData.width} inches</div>
+            </div>
 
-          </div>
-          <div className="column is-half">
-        
-            <QuoteForm
-            height={this.state.height}
-            handleHeight={this.handleHeight}
-            length={this.state.length}
-            handleLength={this.handleLength}
-            handleQuoteRequest={this.handleQuoteRequest}
-            />
-          
-          </div>
-        </div>
+            <div className="column is-half is-pulled-right right-pad">
+              <QuoteForm
+              height={this.state.height}
+              handleHeight={this.handleHeight}
+              length={this.state.length}
+              handleLength={this.handleLength}
+              handleQuoteRequest={this.handleQuoteRequest}
+              />
+            </div>
 
         </div>
+
+      </div>
 
           <RFQModal
           RFQModal={this.state.RFQModal}

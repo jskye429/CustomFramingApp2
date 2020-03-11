@@ -1,3 +1,6 @@
+.rfq{
+    background-color: lightblue;
+}
 .card{
     border-radius: 5px;
     background-color: whitesmoke;
@@ -8,12 +11,13 @@
 .card-footer{
     font-size: 12px;
     justify-content: left;
+    padding:3px;
 }
 .card-header{
     border-radius: 5px;
     justify-content: center;
     background-color: lightblue;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 500;
     padding: 10px
 }
