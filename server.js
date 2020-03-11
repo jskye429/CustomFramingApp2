@@ -19,20 +19,21 @@ if (process.env.NODE_ENV === "production") {
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://whitestudioframes2020:studio2020@ds033797.mlab.com:33797/heroku_5875wdc2";
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 
  // Add routes, both API and view
- app.use("/", routes);
+ 
  
 const connection = mongoose.connection;
 connection.once('open', function() {
- 
+    
     console.log("MongoDB database connection established successfully");
 })
 
 // Start the API server
 app.listen(PORT, function() {
+  app.use("/", routes);
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
