@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/shopart" component={Art} />
         <Route exact path="/signUp" component={newUser} />
-        <Route path="/quoteSpec/:sku" component={QuoteSpec} />
+        <Route path="/quoteSpec/" component={QuoteSpec} />
         <Route path="/list/:id" component={Cart} />
       </div>
     </BrowserRouter> 

@@ -26,8 +26,6 @@ class Home extends Component {
       window.location.href=`/quoteSpec/${spec}`
   };
 
-  
-
   render() {
     return (
       <Section>
