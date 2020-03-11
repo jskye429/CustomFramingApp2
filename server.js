@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 app.use("/", routes);
 
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/frames";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://whitestudioframes2020:studio2020@ds033797.mlab.com:33797/heroku_5875wdc2";
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI);
 
