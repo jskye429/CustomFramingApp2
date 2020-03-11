@@ -5,4 +5,4 @@ node_modules/
 *.orig
 .idea/
 .vscode/
-client2
+client2/
