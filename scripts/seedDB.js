@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 
 
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://heroku_5875wdc2:5a7kms44ma8k50dgmgdhm6t6is@ds033797.mlab.com:33797/heroku_5875wdc2"
+  process.env.MONGODB_URI || "mongodb://localhost/frames"
 );
 
 
