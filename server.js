@@ -18,25 +18,6 @@ if (process.env.NODE_ENV === "production") {
 
 
 
-// app.use("/", routes, (req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
-// app.get('/', (req, res) => {
-//   request(
-//     { url: 'http://localhost:3000/' },
-//     (error, response, body) => {
-//       if (error || response.statusCode !== 200) {
-//         return res.status(500).json({ type: 'error', message: err.message });
-//       }
-
-//       res.json(JSON.parse(body));
-//     }
-//   )
-// });
-
-
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://whitestudioframes2020:studio2020@ds033797.mlab.com:33797/heroku_5875wdc2";
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
@@ -48,7 +29,6 @@ connection.once('open', function() {
 })
 
 app.use("/", routes);
-
 
 // Start the API server
 app.listen(PORT, function() {
