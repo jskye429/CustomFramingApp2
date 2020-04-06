@@ -1,6 +1,6 @@
 import React from "react";
 import "./quote.css";
-import Section from "../Section";
+import Section from "../../components/Section";
 import QuoteForm from "./QuoteForm";
 
 

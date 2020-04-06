@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Banner from "../Banner";
-import Card from "../Cards/Card";
-import Section from "../Section";
+import Banner from "../../components/Banner";
+import Card from "../../components/Cards/Card";
+import Section from "../../components/Section";
 import RejModal from "../Quote/Modals/RejModal";
 import RFQModal from "../Quote/Modals/RFQModal";
 import "./home.css";

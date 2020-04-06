@@ -1,8 +1,8 @@
-import React, { Component } from "./node_modules/react";
-import Section from "../Section";
-import Axios from "./node_modules/axios";
-import CartCard from "../Cards/CartCard";
-import Banner from "../Banner";
+import React, { Component } from "react";
+import Section from "../../components/Section";
+import Axios from "axios";
+import CartCard from "../../components/Cards/CartCard";
+import Banner from "../../components/Banner";
 import "./cart.css"
 import img from "../../images/logo-light.png";
 

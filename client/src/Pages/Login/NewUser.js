@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Section from "../Section"
+import Section from "../../components/Section"
 import SuccessModal from "./Modals/SuccessModal";
 import ErrorModal from "./Modals/ErrorModal";
 import "./login.css"

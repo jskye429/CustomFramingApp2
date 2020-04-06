@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import Section from "../Section";
-import Banner from "../Banner";
-import ArtCard from "../Cards/ArtCard";
+import Section from "../../components/Section";
+import Banner from "../../components/Banner";
+import ArtCard from "../../components/Cards/ArtCard";
 import print1 from "../../images/print1.jpg";
 import print2 from "../../images/print2.jpg";
 import print3 from "../../images/print3.jpg";
@@ -11,7 +11,6 @@ import print5 from "../../images/print5.jpg";
 import print6 from "../../images/print6.jpg";
 import print7 from "../../images/print7.jpg";
 import print8 from "../../images/print8.jpg";
-
 
 
 var horizontalStyle = {
