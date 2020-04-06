@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Nav /> <NavBar/>
+        <Nav /><NavBar/>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/cart" component={Cart} />
