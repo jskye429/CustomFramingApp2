@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import Section from "../Section";
-import Axios from "axios";
+import Axios from "./node_modules/axios";
 import CartCard from "../Cards/CartCard";
 import Banner from "../Banner";
 import "./cart.css"
