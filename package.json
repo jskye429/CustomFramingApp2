@@ -37,10 +37,10 @@
     "cors": "^2.8.5",
     "mongoose": "^5.9.2",
     "nodemon": "^2.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "if-env": "^1.0.4"
   }
 }
